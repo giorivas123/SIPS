@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const appContainer = document.getElementById("app");
   const footer = document.querySelector("footer");
 
-  // Pages
+  // Define pages
   const pages = {
     signup: `
       <h1>Sign Up</h1>
@@ -21,18 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
       <form id="login-form">
         <input type="text" id="login-username" placeholder="Username" required>
         <input type="password" id="login-password" placeholder="Password" required>
-        <div class="toggle-container">
+        <div>
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember Me</label>
         </div>
         <a href="#forgot-password" class="forgot-password">Forgot Password?</a>
         <button type="submit">Sign In</button>
       </form>
-      <div class="social-buttons">
-        <button>Sign in with Apple</button>
-        <button>Sign in with Google</button>
-        <button>Sign in with Facebook</button>
-      </div>
     `,
     "forgot-password": `
       <h1>Forgot Password</h1>
@@ -44,44 +39,44 @@ document.addEventListener("DOMContentLoaded", () => {
     `,
     "home-search": `
       <h1>Home</h1>
-      <p>Search for exciting things here!</p>
+      <p>Search for something exciting!</p>
     `,
     favorites: `
       <h1>Favorites</h1>
-      <p>Your saved items are here.</p>
+      <p>Your saved items are shown here.</p>
     `,
     maps: `
       <h1>Maps</h1>
-      <p>Find locations nearby.</p>
+      <p>Find locations nearby!</p>
     `,
     "drink-diary": `
       <h1>Drink Diary</h1>
-      <p>Track your drinks.</p>
+      <p>Track your drinks here.</p>
     `,
     "profile-user": `
       <h1>Profile</h1>
-      <p>View and edit your profile.</p>
+      <p>View and edit your profile information.</p>
     `,
   };
 
-  // Show/Hide Footer Based on Page
+  // Function to toggle footer visibility
   function toggleFooter(visible) {
     footer.style.display = visible ? "block" : "none";
   }
 
-  // Navigation Logic
+  // Navigate to a page
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
 
-      // Toggle footer visibility
+      // Toggle footer visibility based on the page
       if (["signup", "login", "forgot-password"].includes(page)) {
         toggleFooter(false);
       } else {
         toggleFooter(true);
       }
 
-      // Add logic for buttons in signup or login page
+      // Additional logic for signup and login pages
       if (page === "signup") {
         document.getElementById("toLogin").addEventListener("click", (e) => {
           e.preventDefault();
@@ -93,15 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Handle navigation links
-  document.querySelectorAll("footer a").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const page = event.target.getAttribute("href").substring(1);
-      navigate(page);
-    });
-  });
-
   // Accept button for terms and conditions
   document.getElementById("acceptBtn").addEventListener("click", () => {
     document.getElementById("termsModal").style.display = "none";
@@ -109,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navigate("signup");
   });
 
-  // Handle form submissions
+  // Form submission logic
   content.addEventListener("submit", (event) => {
     event.preventDefault();
     const formId = event.target.id;
@@ -137,5 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial page setup
   navigate("signup");
 });
+
 
   
