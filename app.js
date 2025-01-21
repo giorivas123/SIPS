@@ -123,5 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
   navigate("signup");
 });
 
-
   
