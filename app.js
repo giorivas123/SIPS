@@ -1,87 +1,79 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const termsModal = document.getElementById("termsModal");
-  const acceptBtn = document.getElementById("acceptBtn");
-  const appContent = document.getElementById("app");
   const content = document.getElementById("content");
-  const bottomNav = document.querySelector("footer");  // Reference to the bottom nav
 
+  // Pages
   const pages = {
     signup: `
       <h1>Sign Up</h1>
-      <p>Enter your username and password to sign up.</p>
-      <form id="signupForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required placeholder="Enter username">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required placeholder="Enter password">
-        <button type="submit">Sign Up</button>
+      <form id="signup-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Create Username" required>
+        <input type="password" placeholder="New Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Create Account</button>
       </form>
     `,
-    login: "<h1>Login Page</h1><p>Please log in to your account.</p>",
+    login: `
+      <h1>Login</h1>
+      <form id="login-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <div class="toggle-container">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember Me</label>
+        </div>
+        <a href="#forgot-password" class="forgot-password">Forgot Password?</a>
+        <button type="submit">Sign In</button>
+      </form>
+      <div class="social-buttons">
+        <button>Sign in with Apple</button>
+        <button>Sign in with Google</button>
+        <button>Sign in with Facebook</button>
+      </div>
+    `,
     "forgot-password": `
       <h1>Forgot Password</h1>
       <p>Enter your email to receive a password reset link.</p>
-      <button onclick="navigate('reset-link')">Send Reset Link</button>
+      <form id="forgot-password-form">
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Send Reset Link</button>
+      </form>
     `,
-    "reset-link": "<h1>Reset Link Page</h1><p>A link has been sent to your email!</p>",
-    "home-search": "<h1>Home (Search)</h1><p>Search for something exciting!</p>",
-    "home-for-you": "<h1>Home (For You)</h1><p>Personalized content just for you.</p>",
-    settings: "<h1>Settings</h1><p>Configure your preferences here.</p>",
-    favorites: "<h1>Favorites</h1><p>Your saved items are shown here.</p>",
-    maps: "<h1>Maps</h1><p>Find locations nearby!</p>",
-    "drink-diary": "<h1>Drink Diary</h1><p>Track your drinks here.</p>",
-    "profile-user": "<h1>User Profile</h1><p>View and edit your profile information.</p>",
-    "profile-business": "<h1>Business Profile</h1><p>Details about your business.</p>",
-    insights: "<h1>Insights</h1><p>Business insights and analytics.</p>",
-    edit: "<h1>Edit Page</h1><p>Make changes to your account or content.</p>",
   };
 
+  // Navigation Logic
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
-      if (page === "signup") {
-        bottomNav.style.display = "none"; // Hide bottom nav on sign-up page
-      } else {
-        bottomNav.style.display = "flex"; // Show bottom nav on other pages
-      }
     } else {
       content.innerHTML = "<h1>404</h1><p>Page not found.</p>";
     }
   }
 
-  // Show terms modal before content
-  termsModal.style.display = "flex";
-
-  acceptBtn.addEventListener("click", () => {
-    // Hide the modal and show the sign-up form
-    termsModal.style.display = "none";
-    appContent.style.display = "block";
-    navigate("signup"); // Load the sign-up page
+  // Event Listeners
+  document.getElementById("acceptBtn").addEventListener("click", () => {
+    document.getElementById("termsModal").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    navigate("signup");
   });
 
-  // Handle sign-up form submission
-  document.addEventListener("submit", function(event) {
-    if (event.target.id === "signupForm") {
-      event.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-
-      // Check if username and password match 'Test'
-      if (username === "Test" && password === "Test") {
-        navigate("home-search"); // Redirect to the main page after successful login
-      } else {
-        alert("Invalid username or password!");
-      }
+  content.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formId = event.target.id;
+    if (formId === "signup-form") {
+      alert("Account created! Redirecting to login...");
+      navigate("login");
+    } else if (formId === "login-form") {
+      alert("Logged in successfully!");
+      navigate("home-search");
+    } else if (formId === "forgot-password-form") {
+      alert("Password reset link sent to your email.");
+      navigate("login");
     }
   });
 
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      const page = event.target.getAttribute("href").substring(1);
-      navigate(page);
-    });
-  });
+  // Initial page
+  navigate("signup");
 });
 
   
