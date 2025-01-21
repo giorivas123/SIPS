@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
+  const bottomNav = document.querySelector("footer");
 
   // Pages
   const pages = {
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
+      bottomNav.style.display = (page === "signup" || page === "login") ? "none" : "block"; // Hide nav on signup/login
 
       // Additional logic for buttons
       if (page === "signup") {
@@ -80,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Handle navigation links from the bottom nav bar
-  document.querySelectorAll("footer a").forEach((link) => {
+  document.querySelectorAll("footer nav a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const page = event.target.getAttribute("href").substring(1);
+      const page = event.target.getAttribute("href").substring(1); // Extract page from href
       navigate(page);
     });
   });
