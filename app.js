@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
+  const appContainer = document.getElementById("app");
+  const footer = document.querySelector("footer");
 
   // Pages
   const pages = {
@@ -62,12 +64,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `,
   };
 
+  // Show/Hide Footer Based on Page
+  function toggleFooter(visible) {
+    footer.style.display = visible ? "block" : "none";
+  }
+
   // Navigation Logic
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
 
-      // Additional logic for buttons
+      // Toggle footer visibility
+      if (["signup", "login", "forgot-password"].includes(page)) {
+        toggleFooter(false);
+      } else {
+        toggleFooter(true);
+      }
+
+      // Add logic for buttons in signup or login page
       if (page === "signup") {
         document.getElementById("toLogin").addEventListener("click", (e) => {
           e.preventDefault();
@@ -91,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Accept button for terms and conditions
   document.getElementById("acceptBtn").addEventListener("click", () => {
     document.getElementById("termsModal").style.display = "none";
-    document.getElementById("app").style.display = "block";
+    appContainer.style.display = "block";
     navigate("signup");
   });
 
