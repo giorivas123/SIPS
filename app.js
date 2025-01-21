@@ -28,9 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <button type="submit">Sign In</button>
       </form>
       <div class="social-buttons">
-        <button>Sign in with Apple</button>
-        <button>Sign in with Google</button>
-        <button>Sign in with Facebook</button>
+        <button class="social-btn apple-btn">
+          <img src="apple-logo.svg" alt="Apple">Sign in with Apple
+        </button>
+        <button class="social-btn google-btn">
+          <img src="google-logo.svg" alt="Google">Sign in with Google
+        </button>
+        <button class="social-btn facebook-btn">
+          <img src="facebook-logo.svg" alt="Facebook">Sign in with Facebook
+        </button>
       </div>
     `,
     "forgot-password": `
