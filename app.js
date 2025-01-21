@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     login: `
       <h1>Login</h1>
       <form id="login-form">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
         <div class="toggle-container">
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember Me</label>
@@ -99,12 +99,21 @@ document.addEventListener("DOMContentLoaded", () => {
   content.addEventListener("submit", (event) => {
     event.preventDefault();
     const formId = event.target.id;
+
     if (formId === "signup-form") {
       alert("Account created! Redirecting to login...");
       navigate("login");
     } else if (formId === "login-form") {
-      alert("Logged in successfully!");
-      navigate("home-search");
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+
+      // Check login credentials
+      if (username === "Test" && password === "Test") {
+        alert("Logged in successfully!");
+        navigate("home-search");
+      } else {
+        alert("Invalid username or password. Try again.");
+      }
     } else if (formId === "forgot-password-form") {
       alert("Password reset link sent to your email.");
       navigate("login");
@@ -114,6 +123,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial page setup
   navigate("signup");
 });
-
 
   
