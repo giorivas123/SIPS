@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
-  const footer = document.querySelector("footer");
 
   // Pages
   const pages = {
@@ -68,14 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pages[page]) {
       content.innerHTML = pages[page];
 
-      // Toggle footer visibility
-      if (["signup", "login", "forgot-password"].includes(page)) {
-        footer.style.display = "none"; // Hide footer
-      } else {
-        footer.style.display = "block"; // Show footer
-      }
-
-      // Additional logic for signup page buttons
+      // Additional logic for buttons
       if (page === "signup") {
         document.getElementById("toLogin").addEventListener("click", (e) => {
           e.preventDefault();
@@ -87,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Handle navigation links in footer
+  // Handle navigation links from the bottom nav bar
   document.querySelectorAll("footer a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
@@ -122,5 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial page setup
   navigate("signup");
 });
+
 
   
