@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <input type="password" placeholder="New Password" required>
         <input type="password" placeholder="Confirm Password" required>
         <button type="submit">Create Account</button>
+        <button id="toLogin">Login</button>
       </form>
     `,
     login: `
@@ -45,12 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
+
+      // Handle "toLogin" button click
+      if (page === "signup") {
+        document.getElementById("toLogin").addEventListener("click", (e) => {
+          e.preventDefault();
+          navigate("login");
+        });
+      }
     } else {
       content.innerHTML = "<h1>404</h1><p>Page not found.</p>";
     }
   }
 
-  // Event Listeners
   document.getElementById("acceptBtn").addEventListener("click", () => {
     document.getElementById("termsModal").style.display = "none";
     document.getElementById("app").style.display = "block";
