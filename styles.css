@@ -143,13 +143,17 @@ footer {
   border-top: 1px solid #ccc;
 }
 
+.bottom-nav {
+  padding: 1rem 0;
+}
+
 .bottom-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
 }
 
 .bottom-nav li {
@@ -161,11 +165,18 @@ footer {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bottom-nav a:hover {
   color: #0078d4;
+}
+
+.bottom-nav .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
 }
 
 
