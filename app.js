@@ -40,6 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
         <button type="submit">Send Reset Link</button>
       </form>
     `,
+    "home-search": `
+      <h1>Home</h1>
+      <p>Search for exciting things here!</p>
+    `,
+    favorites: `
+      <h1>Favorites</h1>
+      <p>Your saved items are here.</p>
+    `,
+    maps: `
+      <h1>Maps</h1>
+      <p>Find locations nearby.</p>
+    `,
+    "drink-diary": `
+      <h1>Drink Diary</h1>
+      <p>Track your drinks.</p>
+    `,
+    "profile-user": `
+      <h1>Profile</h1>
+      <p>View and edit your profile.</p>
+    `,
   };
 
   // Navigation Logic
@@ -47,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pages[page]) {
       content.innerHTML = pages[page];
 
-      // Handle "toLogin" button click
+      // Additional logic for buttons
       if (page === "signup") {
         document.getElementById("toLogin").addEventListener("click", (e) => {
           e.preventDefault();
@@ -59,12 +79,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Handle navigation links
+  document.querySelectorAll("footer a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const page = event.target.getAttribute("href").substring(1);
+      navigate(page);
+    });
+  });
+
+  // Accept button for terms and conditions
   document.getElementById("acceptBtn").addEventListener("click", () => {
     document.getElementById("termsModal").style.display = "none";
     document.getElementById("app").style.display = "block";
     navigate("signup");
   });
 
+  // Handle form submissions
   content.addEventListener("submit", (event) => {
     event.preventDefault();
     const formId = event.target.id;
@@ -80,8 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Initial page
+  // Initial page setup
   navigate("signup");
 });
+
 
   
