@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
       content.innerHTML = pages[page];
 
       // Hide or show the bottom navigation bar based on the page
-      if (page === "signup") {
-        bottomNav.style.display = "none"; // Hide nav on signup page
+      if (page === "signup" || page === "login") {
+        bottomNav.style.display = "none"; // Hide nav on signup and login pages
       } else {
         bottomNav.style.display = "block"; // Show nav on other pages
       }
