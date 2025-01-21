@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
-  const bottomNav = document.querySelector("footer");
 
   // Pages
   const pages = {
@@ -28,15 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <button type="submit">Sign In</button>
       </form>
       <div class="social-buttons">
-        <button class="social-btn apple-btn">
-          <img src="apple-logo.svg" alt="Apple">Sign in with Apple
-        </button>
-        <button class="social-btn google-btn">
-          <img src="google-logo.svg" alt="Google">Sign in with Google
-        </button>
-        <button class="social-btn facebook-btn">
-          <img src="facebook-logo.svg" alt="Facebook">Sign in with Facebook
-        </button>
+        <button>Sign in with Apple</button>
+        <button>Sign in with Google</button>
+        <button>Sign in with Facebook</button>
       </div>
     `,
     "forgot-password": `
@@ -73,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function navigate(page) {
     if (pages[page]) {
       content.innerHTML = pages[page];
-      bottomNav.style.display = (page === "signup" || page === "login") ? "none" : "block"; // Hide nav on signup/login
 
       // Additional logic for buttons
       if (page === "signup") {
@@ -87,11 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Handle navigation links from the bottom nav bar
-  document.querySelectorAll("footer nav a").forEach((link) => {
+  // Handle navigation links
+  document.querySelectorAll("footer a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const page = event.target.getAttribute("href").substring(1); // Extract page from href
+      const page = event.target.getAttribute("href").substring(1);
       navigate(page);
     });
   });
@@ -122,5 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial page setup
   navigate("signup");
 });
+
+
+  
 
   
