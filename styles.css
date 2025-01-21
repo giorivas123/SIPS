@@ -1,140 +1,171 @@
 /* General Reset */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-content button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+/* Main Content Styling */
 main {
-    flex: 1;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #content {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-container input {
+  width: auto;
+}
+
+.forgot-password {
+  text-align: right;
+  color: #0078d4;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.social-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.social-buttons button:hover {
+  background-color: #ddd;
 }
 
 /* Bottom Navigation Bar */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center; /* Center the navigation bar */
-    align-items: center;
-    padding: 10px 0; /* Add padding to give space around the items */
-}
-
-.bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%; /* Ensure it spans across the width */
-    max-width: 1000px; /* Limit the width so it doesn't stretch too much */
-    gap: 1rem; /* Add space between nav items */
-    padding: 0 10px; /* Add some space on the sides */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ccc;
 }
 
 .bottom-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Make sure it stretches across */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .bottom-nav li {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .bottom-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    position: relative;
-    padding: 0.5rem;
-}
-
-.bottom-nav a::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem;
 }
 
 .bottom-nav a:hover {
-    color: #0078d4;
+  color: #0078d4;
 }
 
-/* Styling for the Terms Modal */
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-    border-radius: 8px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Styling for Sign-Up Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-input[type="text"],
-input[type="password"] {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
