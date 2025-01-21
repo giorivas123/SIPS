@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const content = document.getElementById("content");
+  const bottomNav = document.querySelector("footer");
 
   // Pages
   const pages = {
@@ -67,6 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pages[page]) {
       content.innerHTML = pages[page];
 
+      // Hide or show the bottom navigation bar based on the page
+      if (page === "signup") {
+        bottomNav.style.display = "none"; // Hide nav on signup page
+      } else {
+        bottomNav.style.display = "block"; // Show nav on other pages
+      }
+
       // Additional logic for buttons
       if (page === "signup") {
         document.getElementById("toLogin").addEventListener("click", (e) => {
@@ -83,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("footer a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const page = event.target.getAttribute("href").substring(1);
+      const page = event.target.getAttribute("href").substring(1); // Extract page from href
       navigate(page);
     });
   });
