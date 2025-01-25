@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drink Diary - SIPS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Drink Diary Page -->
+  <div id="content">
+    <header class="header">
+      <h1>Drink Diary</h1>
+      <button id="addEntryBtn">+ Add Entry</button>
+    </header>
+
+    <!-- Current Entries -->
+    <section class="current-entries">
+      <h2>Current Favorite Drink Entries</h2>
+      <div class="entry">
+        <img src="images/xo-coffee.jpg" alt="XO Coffee" class="entry-image">
+        <div class="entry-info">
+          <h3>XO Coffee</h3>
+          <p>Favorite drink of the week</p>
+        </div>
+        <button class="edit-entry-btn">Edit Entry</button>
+      </div>
+
+      <div class="entry">
+        <img src="images/milk-tea.jpg" alt="Milk Tea" class="entry-image">
+        <div class="entry-info">
+          <h3>Milk Tea</h3>
+          <p>Refreshing flavor enjoyed this weekend</p>
+        </div>
+        <button class="edit-entry-btn">Edit Entry</button>
+      </div>
+
+      <!-- Add more entries here -->
+    </section>
+
+    <!-- Flavor Profile/Timeline Section -->
+    <section class="flavor-profile">
+      <h2>Flavor Profile / Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>XO Coffee</h4>
+          <p>Sweet & Bitter</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Milk Tea</h4>
+          <p>Sweet & Creamy</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Premium Matcha</h4>
+          <p>Earthy & Slightly Sweet</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer with Bottom Navigation Bar -->
+<!-- Footer with Bottom Navigation Bar -->
+<footer>
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">
+          <span class="icon">🏠</span>
+          <span>Home</span>
+        </a></li>
+      <li><a href="favorites.html">
+          <span class="icon">⭐</span>
+          <span>Favorites</span>
+        </a></li>
+      <li><a href="maps.html">
+          <span class="icon">🗺️</span>
+          <span>Map</span>
+        </a></li>
+      <li><a href="drinkdiary.html">
+          <span class="icon">🍹</span>
+          <span>Drink Diary</span>
+        </a></li>
+      <li><a href="profile.html">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a></li>
+    </ul>
+  </nav>
+</footer>
+
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("addEntryBtn").addEventListener("click", function() {
+      window.location.href = "drinkdiary-entry.html"; // Redirect to the add entry page
+    });
+  </script>
+</body>
+</html>

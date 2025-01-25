@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - SIPS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Profile Page -->
+  <div id="content">
+    <header class="header">
+      <h1>Profile</h1>
+    </header>
+
+    <section class="profile-info">
+      <div class="profile-header">
+        <img src="images/user-avatar.jpg" alt="User Avatar" class="profile-avatar">
+        <div class="profile-details">
+          <h2>@J.Doe</h2>
+          <p>Current Beverage Obsession</p>
+          <p>Posts: 21 | Followers: 334 | Following: 80</p>
+        </div>
+      </div>
+      <div class="profile-bio">
+        <p>Jane Doe here! I love trying new drinks and exploring different flavors. Join me on my drink journey!</p>
+      </div>
+
+      <button id="editProfileBtn">Edit Profile</button>
+    </section>
+
+    <!-- Edit Profile Section -->
+    <section class="edit-profile" id="editProfileSection" style="display: none;">
+      <h3>Edit Profile</h3>
+      <form id="editProfileForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" value="JaneDoe" required>
+        
+        <label for="bio">Bio</label>
+        <textarea id="bio">Lorem ipsum dolor sit amet.</textarea>
+
+        <button type="submit">Save</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Footer with Bottom Navigation Bar -->
+<!-- Footer with Bottom Navigation Bar -->
+<footer>
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">
+          <span class="icon">🏠</span>
+          <span>Home</span>
+        </a></li>
+      <li><a href="favorites.html">
+          <span class="icon">⭐</span>
+          <span>Favorites</span>
+        </a></li>
+      <li><a href="maps.html">
+          <span class="icon">🗺️</span>
+          <span>Map</span>
+        </a></li>
+      <li><a href="drinkdiary.html">
+          <span class="icon">🍹</span>
+          <span>Drink Diary</span>
+        </a></li>
+      <li><a href="profile.html">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a></li>
+    </ul>
+  </nav>
+</footer>
+
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("editProfileBtn").addEventListener("click", function() {
+      document.getElementById("editProfileSection").style.display = "block"; // Show the edit section
+    });
+
+    document.getElementById("editProfileForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Profile updated successfully!");
+      document.getElementById("editProfileSection").style.display = "none"; // Hide the edit section after saving
+    });
+  </script>
+
+</body>
+</html>

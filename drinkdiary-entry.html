@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drink Diary Entry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Add/Edit Drink Entry -->
+  <div id="content">
+    <header class="header">
+      <button onclick="window.history.back()">← Back</button>
+      <h1>Drink Diary Entry</h1>
+    </header>
+
+    <section class="entry-form">
+      <form id="diaryEntryForm">
+        <label for="drink-name">Drink Name:</label>
+        <input type="text" id="drink-name" name="drink-name" placeholder="Enter drink name" required>
+
+        <label for="drink-description">Description:</label>
+        <textarea id="drink-description" name="drink-description" rows="4" placeholder="Enter drink description"></textarea>
+
+        <label for="drink-photo">Upload Photo:</label>
+        <input type="file" id="drink-photo" name="drink-photo">
+
+        <button type="submit">Save Entry</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer with Bottom Navigation Bar -->
+<!-- Footer with Bottom Navigation Bar -->
+<footer>
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">
+          <span class="icon">🏠</span>
+          <span>Home</span>
+        </a></li>
+      <li><a href="favorites.html">
+          <span class="icon">⭐</span>
+          <span>Favorites</span>
+        </a></li>
+      <li><a href="maps.html">
+          <span class="icon">🗺️</span>
+          <span>Map</span>
+        </a></li>
+      <li><a href="drinkdiary.html">
+          <span class="icon">🍹</span>
+          <span>Drink Diary</span>
+        </a></li>
+      <li><a href="profile.html">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </a></li>
+    </ul>
+  </nav>
+</footer>
+
+
+  <script src="app.js"></script>
+  <script>
+    // Handle form submission
+    document.getElementById("diaryEntryForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const drinkName = document.getElementById("drink-name").value;
+      const drinkDescription = document.getElementById("drink-description").value;
+      const drinkPhoto = document.getElementById("drink-photo").files[0];
+
+      if (drinkName && drinkDescription) {
+        alert("Entry saved successfully!");
+        // Here you can save the entry to a database or local storage
+        // Redirect back to the main drink diary page
+        window.location.href = "drinkdiary.html";
+      } else {
+        alert("Please fill out the fields.");
+      }
+    });
+  </script>
+</body>
+</html>
