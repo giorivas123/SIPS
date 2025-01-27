@@ -15,3 +15,11 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 # In progress #
 - Currently working on the Sign up page and the other sign in options for the login/sign up page
 - Adding logos to the bottom nav bar.
+
+#Jackeline Ardiles Notes#
+
+-writing notes on what I need to add to the drinkdiary.html and dirnkdriaryentry.html 
+
+-drinkdiary.html needs current favorite businesss selection on the top left, current favorite drink on top right, flavor profile/timeline in the middle, latest memory/entry at the bottom, as well as next event above the timeline. 
+
+-drinkdiaryentry.html needs where to type the entry as well as all the different options they have while editng the entry, a camera button, post button, and a trash button, lastly a back button to drinkdiary.html
