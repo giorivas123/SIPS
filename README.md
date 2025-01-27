@@ -16,7 +16,7 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 - Currently working on the Sign up page and the other sign in options for the login/sign up page
 - Adding logos to the bottom nav bar.
 
-#Jackeline Ardiles Notes#
+# Jackeline Ardiles Notes #
 
 -writing notes on what I need to add to the drinkdiary.html and dirnkdriaryentry.html 
 
