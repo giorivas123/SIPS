@@ -9,12 +9,11 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 
 # Giovanni Rivas Notes #
 - Added basic function of the app (Terms & Conditions, Login Page, Home Page with added bottom nav bar) (1/20/25)
+- Currently working on the Sign up page and the other sign in options for the login/sign up page
+- Adding logos to the bottom nav bar.
 
 # Eliana Villanueva Notes #
 - added to favorites page (images & example favorites)
-# In progress #
-- Currently working on the Sign up page and the other sign in options for the login/sign up page
-- Adding logos to the bottom nav bar.
 
 # Jackeline Ardiles Notes #
 
