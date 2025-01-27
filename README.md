@@ -22,3 +22,6 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 -drinkdiary.html needs current favorite businesss selection on the top left, current favorite drink on top right, flavor profile/timeline in the middle, latest memory/entry at the bottom, as well as next event above the timeline. 
 
 -drinkdiaryentry.html needs where to type the entry as well as all the different options they have while editng the entry, a camera button, post button, and a trash button, lastly a back button to drinkdiary.html
+
+# Kayla West Notes #
+- I am in charge of the business-profile.html and profile.html
