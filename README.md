@@ -18,7 +18,7 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 
 # Jackeline Ardiles Notes #
 
--writing notes on what I need to add to the drinkdiary.html and dirnkdriaryentry.html 
+-writing notes on what I need to add to the drinkdiary.html and drinkdiaryentry.html 
 
 -drinkdiary.html needs current favorite businesss selection on the top left, current favorite drink on top right, flavor profile/timeline in the middle, latest memory/entry at the bottom, as well as next event above the timeline. 
 
