@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favorites - SIPS</title>
   <link rel="stylesheet" href="styles.css">
+  <div id="content">
+    <!--changed header and added all images (style and image logo)-->
+    <header class="header" style="display: flex; align-items: center; justify-content: center; height: 100px;">
+      <div class="logo">
+        <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+      </div>
+    </header>
 </head>
 <body>
 
@@ -21,6 +28,17 @@
           <div class="favorite-info">
             <h3>XO Coffee</h3>
             <p>New! - XO Coffee</p>
+          </div>
+          <button class="delete-icon">🗑️</button>
+        </div>
+        <!-- Added the boba shop -->
+      </div>
+      <div class="favorites-list">
+        <div class="favorite-item">
+          <img src="images/boba.jpg" alt="Boba Shop" class="favorite-image">
+          <div class="favorite-info">
+            <h3>Boba Shop</h3>
+            <p>Downtown - Boba Shop</p>
           </div>
           <button class="delete-icon">🗑️</button>
         </div>
@@ -50,12 +68,26 @@
           </div>
           <button class="heart-icon">❤️</button>
         </div>
-        <!-- Add more items as needed -->
+        <!-- EV added: strawberry matcha, Vanilla latte-->
+        <div class="favorite-item">
+          <img src="images/strawberry-matcha-latte.jpg" alt="Strawberry Matcha Latte" class="favorite-image">
+          <div class="favorite-info">
+            <h3>Strawberry Matcha Latte</h3>
+            <p>A go-to favorite!</p>
+          </div>
+          <button class="heart-icon">❤️</button>
       </div>
+      <div class="favorite-item">
+        <img src="images/vanilla-latte.jpg" alt="Vanilla Cinnamon Iced Latte" class="favorite-image">
+        <div class="favorite-info">
+          <h3>Vanilla Cinnamon Iced Latte</h3>
+          <p>A classic</p>
+        </div>
+        <button class="heart-icon">❤️</button>
+    </div>
     </section>
   </div>
 
-  <!-- Footer with Bottom Navigation Bar -->
 <!-- Footer with Bottom Navigation Bar -->
 <footer>
   <nav class="bottom-nav">
