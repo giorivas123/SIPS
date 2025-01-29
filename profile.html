@@ -1,93 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile - SIPS</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - SIPS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main Profile Page -->
+        <header class="top-nav">
+            <div class="nav-left">
+              <a href="settings.html">
+                <img src="images/icons/gear.png" alt="Settings" class="settings-icon">
+              </a>
+            </div>
+        
+            <div class="nav-center">
+              <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+            </div>
+        
+            <div class="nav-right">
+              <a href="#" id="search-btn">
+                <img src="images/icons/edit.png" alt="Search" class="edit-icon">
+              </a>
+            </div>
+          </header>
 
-  <!-- Main Profile Page -->
-  <div id="content">
-    <header class="header">
-      <h1>Profile</h1>
-    </header>
-
-    <section class="profile-info">
-      <div class="profile-header">
-        <img src="images/user-avatar.jpg" alt="User Avatar" class="profile-avatar">
-        <div class="profile-details">
-          <h2>@J.Doe</h2>
-          <p>Current Beverage Obsession</p>
-          <p>Posts: 21 | Followers: 334 | Following: 80</p>
+    <!--  Profile Info -->
+      <section class="profile-info">
+        <div class="profile-header">
+          <img
+            src="images/user-profile.jpg"
+            alt="User Avatar with border"
+            class="profile-avatar"
+          />
+          <div class="profile-details">
+            <h2>@J.Doe</h2>
+            
+            <p>Posts: 21 | Followers: 334 | Following: 80</p>
+          </div>
         </div>
-      </div>
-      <div class="profile-bio">
-        <p>Jane Doe here! I love trying new drinks and exploring different flavors. Join me on my drink journey!</p>
-      </div>
+        <div class="profile-bio">
+          <p>
+            Jane Doe here! I love trying new drinks and exploring different
+            flavors. Join me on my drink journey!
+          </p>
+        </div>
 
-      <button id="editProfileBtn">Edit Profile</button>
-    </section>
+        <button id="editProfileBtn">Edit Profile</button>
+      </section>
 
     <!-- Edit Profile Section -->
-    <section class="edit-profile" id="editProfileSection" style="display: none;">
-      <h3>Edit Profile</h3>
-      <form id="editProfileForm">
-        <label for="username">Username</label>
-        <input type="text" id="username" value="JaneDoe" required>
-        
-        <label for="bio">Bio</label>
-        <textarea id="bio">Lorem ipsum dolor sit amet.</textarea>
+      <section
+        class="edit-profile"
+        id="editProfileSection"
+        style="display: none"
+      >
+        <h3>Edit Profile</h3>
+        <form id="editProfileForm">
+          <label for="username">Username</label>
+          <input type="text" id="username" value="JaneDoe" required />
 
-        <button type="submit">Save</button>
-      </form>
+          <label for="bio">Bio</label>
+          <textarea id="bio">Lorem ipsum dolor sit amet.</textarea>
+
+          <button type="submit">Save</button>
+        </form>
+      </section>
+
+    <!-- Current Drink Obsession -->
+    <section class="CurrentDrinkObsession">
+        <div class="drinkobsession-header">
+          <img
+            src="images/currentdrinkobsession.jpg"
+            alt="Current Drink Obessession"
+            class="drinkobsession-photo"
+          />
+          <div class="drinkobsession-details">
+            <h2>Current Beverage Obsession</h2>
+          </div>
+        </div>
+    <!-- Share a Memory -->
+    <section class="Share-Memory">
+        <div class="memory-header">
+          <img
+            src="images/memoryphoto.jpg"
+            alt="Memory Photo"
+            class="memory-photo"
+          />
+          <div class="memory-details">
+            <h2>Jane shared a memory from her visit to @XOCOFFEE</h2>
+          </div>
+        </div>
+
+    <!-- Diary Entry -->
+    <section class="Diary-Entry">
+        <div class="diaryentry-header">
+          <h2>@Milk Tea Place</h2>
+        </div>
+        <div class="diaryentry-details">
+            <p>Diary Entry from @J.Doe "Coming to Milk Tea Palace was such a joy! I loved the atmosphere it let me work in peace. I'd like to also mention the pastries and milk tea was delicious! Thank you to the staff for being so friendly!</p>
+        </div>
+        <div class="diaryentry-footer">
+            <h2>Jane's Diary Entry was mentioned @Milk Tea Palace</h2>
+        </div>
     </section>
 
-  </div>
+    <!-- Events -->
+    <section class="Share-Event">
+        <div class="event-header">
+          <img
+            src="images/event.jpg"
+            alt="event Photo"
+            class="event-photo"
+          />
+          <div class="event-details">
+            <h2>Jane is going to attend the grand opening of the @CraftSodaCentral</h2>
+          </div>
+        </div>
+    </div>
 
-  <!-- Footer with Bottom Navigation Bar -->
-<!-- Footer with Bottom Navigation Bar -->
-<footer>
-  <nav class="bottom-nav">
-    <ul>
-      <li><a href="home.html">
-          <span class="icon">🏠</span>
-          <span>Home</span>
-        </a></li>
-      <li><a href="favorites.html">
-          <span class="icon">⭐</span>
-          <span>Favorites</span>
-        </a></li>
-      <li><a href="maps.html">
-          <span class="icon">🗺️</span>
-          <span>Map</span>
-        </a></li>
-      <li><a href="drinkdiary.html">
-          <span class="icon">🍹</span>
-          <span>Drink Diary</span>
-        </a></li>
-      <li><a href="profile.html">
-          <span class="icon">👤</span>
-          <span>Profile</span>
-        </a></li>
-    </ul>
-  </nav>
-</footer>
+    <!-- Footer with Bottom Navigation Bar -->
+    <footer>
+      <nav class="bottom-nav">
+        <ul>
+          <li>
+            <a href="home.html">
+              <span class="icon">🏠</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="favorites.html">
+              <span class="icon">⭐</span>
+              <span>Favorites</span>
+            </a>
+          </li>
+          <li>
+            <a href="maps.html">
+              <span class="icon">🗺️</span>
+              <span>Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="drinkdiary.html">
+              <span class="icon">🍹</span>
+              <span>Drink Diary</span>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <span class="icon">👤</span>
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
 
+    <script src="app.js"></script>
+    <script>
+      document
+        .getElementById("editProfileBtn")
+        .addEventListener("click", function () {
+          document.getElementById("editProfileSection").style.display = "block"; // Show the edit section
+        });
 
-  <script src="app.js"></script>
-  <script>
-    document.getElementById("editProfileBtn").addEventListener("click", function() {
-      document.getElementById("editProfileSection").style.display = "block"; // Show the edit section
-    });
-
-    document.getElementById("editProfileForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Profile updated successfully!");
-      document.getElementById("editProfileSection").style.display = "none"; // Hide the edit section after saving
-    });
-  </script>
-
-</body>
+      document
+        .getElementById("editProfileForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Profile updated successfully!");
+          document.getElementById("editProfileSection").style.display = "none"; // Hide the edit section after saving
+        });
+    </script>
+  </body>
 </html>
+
