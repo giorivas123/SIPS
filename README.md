@@ -14,6 +14,7 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 
 # Eliana Villanueva Notes #
 - added to favorites page (images & example favorites)
+- committed all 
 
 # Jackeline Ardiles Notes #
 
