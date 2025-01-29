@@ -609,46 +609,154 @@ footer {
 }
 /* General Profile Styles */
 
-/* Profile Section */
-.profile-header {
-  display: flex;
-  align-items: center;
-}
+    /* Navigation Section */
+    .settings-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .edit-icon {
+        width: 20px;
+        height: 20px;
+    }
+  
+    /* Profile Section */
 
-.profile-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
+    .profile-header {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+     }
+     .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 5px solid black;
+        object-fit: cover;
+    }
+     .profile-details h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .profile-details p {
+        font-size: 1rem;
+        color: #777;
+    }
+    .profile-bio {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #555;
+    }
+    button {
+        background-color: #002F18;
+        color: white;
+        padding: 0.6rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    button:hover {
+        background-color: #115E40;
+    }
 
-.profile-details h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+    /* Current Beverage Obsession */
+    .drinkobsession-header {
+        display: flex;
+        align-items: center;
+        background-color: rgba(205, 186, 162, 0.329);
+        margin-bottom: 20px;
+        border-radius: 25px;
+        }
+    .drinkobsession-photo {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 50%;
+        padding: 15px; 
+        object-fit: cover;
 
-.profile-details p {
-  font-size: 1rem;
-  color: #777;
-}
+        }
+    .drinkobsession-details  h2 {
+        font-size: 1rem;
+        color: #3e3e3ee8;
+        }
+    
+    /* Memory Post */
+    .memory-header {
+        display: flex;
+        align-items: center;
+        background-color: rgba(205, 186, 162, 0.329);
+        margin-bottom: 20px;
+        }
+        
+    .memory-photo {
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+        object-fit: cover;
+        }
+    .memory-details  h2 {
+        font-size: 1rem;
+        color: #3e3e3ee8;
+        margin-right: 20px;
+        }
 
-.profile-bio {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #555;
-}
+    /* Diary Entry */
+    .diaryentry-header {
+        display: flex;
+        align-items: center;
+        background-color: rgba(17, 17, 17, 0.794);
+        }
+        .diaryentry-header  h2 {
+            font-size: .75rem;
+            color: #f7f6f6fa;
+            padding: 2px
+            }
+    .diaryentry-footer {
+        display: flex;
+        align-items: center;
+        background-color: rgba(17, 17, 17, 0.794);
+        margin-bottom: 20px;
+        }
+        .diaryentry-footer  h2 {
+            font-size: .75rem;
+            color: #f7f6f6fa;
+            padding: 2px;
+            }
+    .diaryentry-details {
+        background-image: url('images/diaryentry.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        padding: 15px;
+        color: white;
+        text-align: center;
+        }
 
-button {
-  background-color: #002F18;
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #115E40;
-}
+    /* Event */
+    .event-header {
+        display: flex;
+        align-items: center;
+        background-color: rgba(205, 186, 162, 0.329);
+        border-radius: 25px;
+        margin-bottom: 120px;
+        }
+    .event-photo {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+        border-radius: 25%;
+        padding: 15px; 
+        object-fit: cover;
+        }
+    .event-details  h2 {
+        font-size: .75rem;
+        color: #3e3e3ee8;
+        }
 
 /* Business Profile Insights */
 .business-insights {
