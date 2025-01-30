@@ -27,4 +27,5 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 
 # Kayla West Notes #
 - I am in charge of the business-profile.html and profile.html
-- I have been figuring out what I need to put into the business-profile.html and profile.html
+- Finished with the business-profile.html and profile.html
+- Currently working on the css for the settings.html
