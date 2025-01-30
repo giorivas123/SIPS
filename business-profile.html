@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Business Profile - SIPS</title>
+</head>
+<body>
+  <!-- Main Business Profile Page -->
+  <div id="content">
+    <!-- Profile Info Section -->
+    <section class="profile-info">
+      <div class="profile-header">
+        <img src="images/businessprofile/businesspfp.jpg" alt="Business Avatar" class="profile-avatar" />
+        <div class="profile-details">
+          <h2>@haancoffeeroasters</h2>
+          <button id="followBtn" class="follow-btn">Follow</button>
+          <p>Spotlight Beverage: Latte Art</p>
+          <p>Posts: 15 | Followers: 1200 | Following: 50</p>
+        </div>
+      </div>
+      <div class="profile-bio">
+        <p>
+          ☕ HaanCoffee<br />
+          ✨ Crafting exceptional coffee moments 🌍<br />
+          🌱 Sustainability | ❤️ Community<br />
+           ☕ Premium beans<br />
+          📍 1235 E Colonial Dr, Orlando, FL 32803<br />
+            Sip with us! 
+          <a href="https://haancoffee.com/" target="_blank">haancoffee.com</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Spotlight Beverage Section -->
+    <section class="spotlight-beverage">
+      <div class="spotlight-header">
+        <h2>Spotlight Beverage</h2>
+      </div>
+      <div class="spotlight-details">
+        <img src="images/businessprofile/spotlightbeverage.jpeg" alt="Spotlight Beverage" class="spotlight-image" />
+      </div>
+    </section>
+
+    <!-- Share a Memory Section -->
+    <section class="share-memory">
+      <div class="memory-header">
+        <img src="images/businessprofile/memoryphoto2.JPG" alt="Memory Photo" class="memory-photo" />
+        <div class="memory-details">
+          <h2>Jane shared a memory from her visit to @haancoffeeroasters</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diary Entry Section -->
+    <section class="diary-entry">
+      <div class="diaryentry-header">
+        <h2>Our Diary Entries @haancoffeeroasters</h2>
+      </div>
+      <div class="diaryentry-details">
+        <p>Diary Entry from @J.Doe<br />
+        "Visiting HaanCoffee was such a delightful experience! The cozy atmosphere made it the perfect spot to get some work done in peace. I have to mention how incredible the coffee and pastries were—absolutely delicious! A huge thank you to the staff for being so welcoming and friendly!"</p>
+      </div>
+      <div class="diaryentry-footer">
+        <h2>A Diary Entry was mentioned @haancoffeeroasters</h2>
+      </div>
+    </section>
+
+    <!-- Footer with Bottom Navigation Bar -->
+    <footer>
+      <nav class="bottom-nav">
+        <ul>
+          <li><a href="home.html">
+              <img src="images/icons/home.png" alt="Home" class="nav-icon" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li><a href="favorites.html">
+              <img src="images/icons/star.png" alt="Favorites" class="nav-icon" />
+              <span>Favorites</span>
+            </a>
+          </li>
+          <li><a href="maps.html">
+              <img src="images/icons/location.png" alt="Map" class="nav-icon" />
+              <span>Map</span>
+            </a>
+          </li>
+          <li><a href="drinkdiary.html">
+              <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon" />
+              <span>Drink Diary</span>
+            </a>
+          </li>
+          <li><a href="profile.html">
+              <img src="images/icons/user.png" alt="Profile" class="nav-icon" />
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('followBtn').addEventListener('click', function () {
+      this.innerHTML = this.innerHTML === 'Follow' ? 'Following' : 'Follow';
+      this.classList.toggle('following');
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+  }
+  
+  /* Favorites Page Specific */
+  #favorites-page {
+    padding-top: 60px; /* Space for fixed top nav */
+    margin: 0; /* Remove any extra margin */
+    width: 100%; /* Ensure full width */
+  }
+  
+  /* Top Navigation Bar for favorites.html */
+  #favorites-page .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 1000; /* Keep nav on top */
+  }
+  
+  #favorites-page .top-nav .logo-image {
+    width: 120px;
+  }
+  
+  #favorites-page .top-nav .nav-left a,
+  #favorites-page .top-nav .nav-center a,
+  #favorites-page .top-nav .nav-right a {
+    text-decoration: none;
+    color: #333;
+  }
+  /* Content Area for favorites.html */
+/* Content Area for favorites.html */
+#favorites-page #content {
+    padding: 15px;
+    padding-top: 100px; /* Adjust to prevent overlap with nav */
+    width: 100%;
+    margin-left: 0px; /* Move content to the left */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Favorites List for favorites.html */
+  #favorites-page .favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+  
+  /* Favorite Item */
+  #favorites-page .favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 5px 0;
+    align-items: center; /* Align all items (text, checkbox, heart) horizontally */
+  }
+  
+  /* Adjust Heart Icon */
+  #favorites-page .heart-icon {
+    font-size: 1.8rem;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;  /* Adjust the margin for positioning */
+    display: inline-block;
+  }
+  
+  /* Adjust the checkbox and delete button placement */
+  #favorites-page .favorite-item input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #favorites-page .favorite-info {
+    flex-grow: 1;
+    padding-left: 10px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #favorites-page .favorite-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center; /* Center align the title */
+  }
+  
+  #favorites-page .favorite-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: center; /* Center align the description */
+  }

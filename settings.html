@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings & Privacy - SIPS</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body & Font Settings */
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fafafa; /* Light gray background */
+      color: #333;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-left img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    .nav-center img {
+      width: 120px;
+      height: auto;
+    }
+
+    /* Settings Title */
+    .settings-title {
+      font-size: 30px;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    /* Settings Menu */
+    .settings-menu {
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #777;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .settings-menu ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .settings-menu li {
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .settings-menu li:last-child {
+      border-bottom: none;
+    }
+
+    .settings-menu a {
+      font-size: 16px;
+      color: #333;
+      text-decoration: none;
+      font-weight: normal;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .settings-menu a:hover {
+      color: #008000; /* Instagram blue color */
+    }
+
+    .arrow {
+      font-size: 16px;
+      color: #999;
+    }
+
+    /* Hover effect for list items */
+    .settings-menu li:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .settings-title {
+        font-size: 26px;
+      }
+
+      .settings-menu {
+        margin: 15px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <!-- Back Button: Uses window.history.back() to return to the previous page -->
+      <a href="javascript:void(0);" onclick="window.history.back();">
+        <img src="images/icons/arrow.png" alt="Back" class="settings-icon">
+      </a>
+    </div>
+    
+    <div class="nav-center">
+      <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+    </div>
+  </header>
+
+  <!-- Settings & Privacy Title -->
+  <div class="settings-title">
+    Settings & Privacy
+  </div>
+
+  <!-- Settings Options -->
+  <div class="settings-menu">
+    <p class="section-title">How you use SIPS</p>
+    <ul>
+      <li><a href="#">Saved</a> <span class="arrow">➡</span></li>
+      <li><a href="#">Notifications</a> <span class="arrow">➡</span></li>
+    </ul>
+
+    <p class="section-title">For small businesses</p>
+    <ul>
+      <li><a href="#">Insight</a> <span class="arrow">➡</span></li>
+      <li><a href="#">Scheduled Content</a> <span class="arrow">➡</span></li>
+      <li><a href="#">Creator tools and controls</a> <span class="arrow">➡</span></li>
+    </ul>
+
+    <p class="section-title">Who can view your content</p>
+    <ul>
+      <li><a href="#">Account Privacy</a> <span class="arrow">➡</span></li>
+      <li><a href="#">Blocked</a> <span class="arrow">➡</span></li>
+    </ul>
+
+    <p class="section-title">More info and support</p>
+    <ul>
+      <li><a href="#">Help</a> <span class="arrow">➡</span></li>
+      <li><a href="#">Privacy Center</a> <span class="arrow">➡</span></li>
+      <li><a href="#">About</a> <span class="arrow">➡</span></li>
+    </ul>
+
+    <p class="section-title">Login</p>
+    <ul>
+      <li><a href="#" class="login-info">Login info</a> <span class="arrow">➡</span></li>
+      <li><a href="#" class="logout">Log Out</a> <span class="arrow">➡</span></li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

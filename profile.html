@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - SIPS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!--  Profile Info -->
+      <section class="profile-info">
+        <div class="profile-header">
+          <img
+            src="images/pfp/face1.jpg"
+            alt="User Avatar with border"
+            class="profile-avatar"
+          />
+          <div class="profile-details">
+            <h2>@J.Doe</h2>
+            
+            <p>Posts: 21 | Followers: 334 | Following: 80</p>
+          </div>
+        </div>
+        <div class="profile-bio">
+          <p>
+            Jane Doe here! I love trying new drinks and exploring different
+            flavors. Join me on my drink journey!
+          </p>
+        </div>
+
+        <button id="editProfileBtn">Edit Profile</button>
+      </section>
+
+    <!-- Edit Profile Section -->
+      <section
+        class="edit-profile"
+        id="editProfileSection"
+        style="display: none"
+      >
+        <h3>Edit Profile</h3>
+        <form id="editProfileForm">
+          <label for="username">Username</label>
+          <input type="text" id="username" value="JaneDoe" required />
+
+          <label for="bio">Bio</label>
+          <textarea id="bio">Lorem ipsum dolor sit amet.</textarea>
+
+          <button type="submit">Save</button>
+        </form>
+      </section>
+
+    <!-- Current Drink Obsession -->
+    <section class="CurrentDrinkObsession">
+        <div class="drinkobsession-header">
+          <img
+            src="images/profile/currentdrinkobsession.jpg"
+            alt="Current Drink Obessession"
+            class="drinkobsession-photo"
+          />
+          <div class="drinkobsession-details">
+            <h2>Current Beverage Obsession</h2>
+          </div>
+        </div>
+    <!-- Share a Memory -->
+    <section class="Share-Memory">
+        <div class="memory-header">
+          <img
+            src="images/profile/memoryphoto.jpg"
+            alt="Memory Photo"
+            class="memory-photo"
+          />
+          <div class="memory-details">
+            <h2>Jane shared a memory from her visit to @XOCOFFEE</h2>
+          </div>
+        </div>
+
+        <section class="Diary-Entry">
+          <div class="diaryentry-header">
+            <h2>@Milk Tea Place</h2>
+          </div>
+          <div class="diaryentry-details">
+            <p>Diary Entry from @J.Doe "Coming to Milk Tea Palace was such a joy! I loved the atmosphere it let me work in peace. I'd like to also mention the pastries and milk tea was delicious! Thank you to the staff for being so friendly!"</p>
+          </div>
+          <div class="diaryentry-footer">
+            <h2>Jane's Diary Entry was mentioned @Milk Tea Palace</h2>
+          </div>
+        </section>        
+
+    <!-- Events -->
+    <section class="Share-Event">
+        <div class="event-header">
+          <img
+            src="images/profile/event.jpg"
+            alt="event Photo"
+            class="event-photo"
+          />
+          <div class="event-details">
+            <h2>Jane is going to attend the grand opening of the @CraftSodaCentral</h2>
+          </div>
+        </div>
+    </div>
+
+  <!-- Footer with Bottom Navigation Bar -->
+<!-- Footer with Bottom Navigation Bar -->
+<footer>
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">
+          <img src="images/icons/home.png" alt="Home" class="nav-icon">
+          <span>Home</span>
+        </a>
+      </li>
+      <li><a href="favorites.html">
+          <img src="images/icons/star.png" alt="Favorites" class="nav-icon">
+          <span>Favorites</span>
+        </a>
+      </li>
+      <li><a href="maps.html">
+          <img src="images/icons/location.png" alt="Map" class="nav-icon">
+          <span>Map</span>
+        </a>
+      </li>
+      <li><a href="drinkdiary.html">
+          <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon">
+          <span>Drink Diary</span>
+        </a>
+      </li>
+      <li><a href="profile.html">
+          <img src="images/icons/user.png" alt="Profile" class="nav-icon">
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("editProfileBtn").addEventListener("click", function() {
+      document.getElementById("editProfileSection").style.display = "block"; // Show the edit section
+    });
+
+    document.getElementById("editProfileForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Profile updated successfully!");
+      document.getElementById("editProfileSection").style.display = "none"; // Hide the edit section after saving
+    });
+  </script>
+
+</body>
+</html>

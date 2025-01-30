@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map - SIPS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+  <style>
+    /* Add the CSS from above here */
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <a href="settings.html">
+        <img src="images/icons/gear.png" alt="Settings" class="settings-icon">
+      </a>
+    </div>
+    
+    <div class="nav-center">
+      <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+    </div>
+  </header>
+
+  <!-- Search Bar Below the Top Nav Bar -->
+  <input type="text" class="search-bar" placeholder="Search locations..." />
+
+  <!-- Image of ORL Map, contained and fully visible -->
+  <div id="map-container">
+    <img src="images/orlmap.png" alt="Map screenshot">
+  </div>
+
+  <!-- Suggested Locations Section -->
+<div class="suggested-locations">
+  <h3>Suggested Locations</h3>
+  <div id="content">
+    <!-- Suggested List -->
+    <section class="suggested-list">
+      <div class="suggested-item" style="background-image: url('images/maps/premium-matcha.jpg');">
+        <div class="suggested-info">
+          <h3>Premium Matcha Maiko</h3>
+          <p>Amazing matcha drinks in town!</p>
+        </div>
+      </div>
+
+      <div class="suggested-item" style="background-image: url('images/maps/haan-coffee.jpg');">
+        <div class="suggested-info">
+          <h3>Haan Coffee</h3>
+          <p>A calming brew for the perfect reset.</p>
+        </div>
+      </div>
+
+      <div class="suggested-item" style="background-image: url('images/maps/coffee-shop.jpg');">
+        <div class="suggested-info">
+          <h3>XO Coffee</h3>
+          <p>Our latest location offering delicious coffee.</p>
+        </div>
+      </div>
+
+      <div class="suggested-item" style="background-image: url('images/maps/milk-tea-cafe.jpg');">
+        <div class="suggested-info">
+          <h3>Coffee Shop</h3>
+          <p>A cozy spot to relax and enjoy your coffee.</p>
+        </div>
+      </div>
+
+      <div class="suggested-item" style="background-image: url('images/maps/sips-dips.jpg');">
+        <div class="suggested-info">
+          <h3>Sips & Dips</h3>
+          <p>A place to taste and savor new flavors!</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+  <!-- Footer Section -->
+  <footer>
+    <nav class="bottom-nav">
+      <ul>
+        <li><a href="home.html">
+            <img src="images/icons/home.png" alt="Home" class="nav-icon">
+            <span>Home</span>
+          </a>
+        </li>
+        <li><a href="favorites.html">
+            <img src="images/icons/star.png" alt="Favorites" class="nav-icon">
+            <span>Favorites</span>
+          </a>
+        </li>
+        <li><a href="maps.html">
+            <img src="images/icons/location.png" alt="Map" class="nav-icon">
+            <span>Map</span>
+          </a>
+        </li>
+        <li><a href="drinkdiary.html">
+            <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon">
+            <span>Drink Diary</span>
+          </a>
+        </li>
+        <li><a href="profile.html">
+            <img src="images/icons/user.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+
+  <script>
+    let map;
+    let userLocation;
+
+    // Initialize Google Map
+    function initMap() {
+      const defaultLocation = { lat: 40.7128, lng: -74.0060 };
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: defaultLocation,
+      });
+      showLocationModal();
+    }
+
+    // Request location access
+    function getUserLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            map.setCenter(userLocation);
+            new google.maps.Marker({
+              position: userLocation,
+              map: map,
+              title: "You are here",
+            });
+          },
+          () => {
+            alert("Unable to retrieve your location.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+    
+    // Show the location access modal
+    function showLocationModal() {
+      document.getElementById("locationModal").style.display = "block";
+    }
+
+    // Event listeners for location modal buttons
+    document.getElementById("allowLocationBtn").addEventListener("click", () => {
+      getUserLocation();
+      document.getElementById("locationModal").style.display = "none";
+    });
+    document.getElementById("denyLocationBtn").addEventListener("click", () => {
+      alert("Location access denied.");
+      document.getElementById("locationModal").style.display = "none";
+    });
+
+    window.onload = function() {
+      document.getElementById("locationModal").style.display = "flex";
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites - SIPS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="favorites.css"> <!-- Add this line -->
+</head>
+<body id="favorites-page">
+ <!-- Top Navigation Bar -->
+ <header class="top-nav">
+  <div class="nav-left">
+    <a href="settings.html">
+      <img src="images/icons/gear.png" alt="Settings" class="settings-icon">
+    </a>
+  </div>
+  
+  <div class="nav-center">
+    <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+    <nav class="category-tabs">
+      <ul>
+        <li><a href="#">All</a></li>
+        <li><a href="#">Coffee</a></li>
+        <li><a href="#">Tea</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="nav-right">
+    <!-- Trash Bin Icon -->
+    <a href="#" id="trash-btn">
+      <img src="images/icons/trash-bin.png" alt="Delete" class="trash-icon">
+    </a>
+  </div>
+</header>
+
+
+  <!-- Content Area -->
+  <div id="content">
+    <!-- Favorites List -->
+    <section class="favorites-list">
+      <div class="favorite-item" style="background-image: url('images/favorite1.jpg');">
+        <input type="checkbox" class="select-favorite">
+        <div class="favorite-info">
+          <h3>Milk Tea Cafe</h3>
+        </div>
+        <button class="heart-icon">❤️</button>
+      </div>
+
+      <div class="favorite-item" style="background-image: url('images/favorite2.jpg');">
+        <input type="checkbox" class="select-favorite">
+        <div class="favorite-info">
+          <h3>Premium Matcha Maiko</h3>
+        </div>
+        <button class="heart-icon">❤️</button>
+      </div>
+
+      <div class="favorite-item" style="background-image: url('images/favorite3.jpg');">
+        <input type="checkbox" class="select-favorite">
+        <div class="favorite-info">
+          <h3>Strawberry Matcha Latte</h3>
+        </div>
+        <button class="heart-icon">❤️</button>
+      </div>
+
+      <div class="favorite-item" style="background-image: url('images/favorite4.jpg');">
+        <input type="checkbox" class="select-favorite">
+        <div class="favorite-info">
+          <h3>Vanilla Cinnamon Iced Latte</h3>
+        </div>
+        <button class="heart-icon">❤️</button>
+      </div>
+    </section>
+  </div>
+  <!-- Footer with Bottom Navigation Bar -->
+<footer>
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">
+          <img src="images/icons/home.png" alt="Home" class="nav-icon">
+          <span>Home</span>
+        </a>
+      </li>
+      <li><a href="favorites.html">
+          <img src="images/icons/star.png" alt="Favorites" class="nav-icon">
+          <span>Favorites</span>
+        </a>
+      </li>
+      <li><a href="maps.html">
+          <img src="images/icons/location.png" alt="Map" class="nav-icon">
+          <span>Map</span>
+        </a>
+      </li>
+      <li><a href="drinkdiary.html">
+          <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon">
+          <span>Drink Diary</span>
+        </a>
+      </li>
+      <li><a href="profile.html">
+          <img src="images/icons/user.png" alt="Profile" class="nav-icon">
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  <script src="app.js"></script>
+</body>
