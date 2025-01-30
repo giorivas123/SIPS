@@ -14,7 +14,8 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 
 # Eliana Villanueva Notes #
 - added to favorites page (images & example favorites)
-- committed all 
+- committed all
+- 1/29: added images, map image and code to maps.html. also had to add a css code within the maps.html code
 
 # Jackeline Ardiles Notes #
 
