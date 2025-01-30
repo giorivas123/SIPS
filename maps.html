@@ -5,7 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map - SIPS</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+  <style>
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10000;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Map Container */
+    #map-container {
+      height: 80vh;
+      width: 100%;
+      text-align: center;
+    }
+
+    .suggested-locations ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .suggested-locations li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .suggested-locations img {
+      margin-right: 10px;
+    }
+    /* Add space above the footer */
+    footer {
+      margin-top: 20px; /* Adds space between the content and the footer */
+    }
+
+    footer {
+      background-color: white; /* Set the background to white */
+      padding-top: 10px; /* Adds a small spacer above the navigation */
+    }
+
+    footer nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    footer nav ul li a:hover {
+      color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,113 +106,71 @@
   </div>
 
   <!-- Map Container -->
-  <div id="map" style="height: 80vh; width: 100%;"></div>
+  <div id="map-container">
+    <img src="images/orlmap.png" alt="Map screenshot" style="max-height: 100%; width: auto;">
+  </div>
 
   <!-- Suggested Locations Section -->
   <div class="suggested-locations">
     <h3>Suggested Locations</h3>
     <ul>
-      <li><strong>Premium Matcha Maiko</strong> - Amazing matcha drinks in town!</li>
-      <li><strong>Haan Coffee</strong> - A calming brew for the perfect reset.</li>
-      <li><strong>XO Coffee</strong> - Our latest location offering delicious coffee.</li>
-      <li><strong>Coffee Shop</strong> - A cozy spot to relax and enjoy your coffee.</li>
-      <li><strong>Sips & Dips</strong> - A place to taste and savor new flavors!</li>
+      <li>
+        <img src="images/premium-matcha.jpg" alt="Premium Matcha Maiko" width="100">
+        <strong>Premium Matcha Maiko</strong> - Amazing matcha drinks in town!
+      </li>
+      <li>
+        <img src="images/haan-coffee.jpg" alt="Haan Coffee" width="100">
+        <strong>Haan Coffee</strong> - A calming brew for the perfect reset.
+      </li>
+      <li>
+        <img src="images/coffee-shop.jpg" alt="XO Coffee" width="100">
+        <strong>XO Coffee</strong> - Our latest location offering delicious coffee.
+      </li>
+      <li>
+        <img src="images/milk-tea-cafe.jpg" alt="Coffee Shop" width="100">
+        <strong>Coffee Shop</strong> - A cozy spot to relax and enjoy your coffee.
+      </li>
+      <li>
+        <img src="images/sips-dips.jpg" alt="Sips & Dips" width="100">
+        <strong>Sips & Dips</strong> - A place to taste and savor new flavors!
+      </li>
     </ul>
   </div>
 
   <!-- Footer with Bottom Navigation Bar -->
-<!-- Footer with Bottom Navigation Bar -->
-<footer>
-  <nav class="bottom-nav">
-    <ul>
-      <li><a href="home.html">
-          <span class="icon">🏠</span>
-          <span>Home</span>
-        </a></li>
-      <li><a href="favorites.html">
-          <span class="icon">⭐</span>
-          <span>Favorites</span>
-        </a></li>
-      <li><a href="maps.html">
-          <span class="icon">🗺️</span>
-          <span>Map</span>
-        </a></li>
-      <li><a href="drinkdiary.html">
-          <span class="icon">🍹</span>
-          <span>Drink Diary</span>
-        </a></li>
-      <li><a href="profile.html">
-          <span class="icon">👤</span>
-          <span>Profile</span>
-        </a></li>
-    </ul>
-  </nav>
-</footer>
-
+  <footer>
+    <nav class="bottom-nav">
+      <ul>
+        <li><a href="home.html"><span class="icon">🏠</span><span>Home</span></a></li>
+        <li><a href="favorites.html"><span class="icon">⭐</span><span>Favorites</span></a></li>
+        <li><a href="maps.html"><span class="icon">🗺️</span><span>Map</span></a></li>
+        <li><a href="drinkdiary.html"><span class="icon">🍹</span><span>Drink Diary</span></a></li>
+        <li><a href="profile.html"><span class="icon">👤</span><span>Profile</span></a></li>
+      </ul>
+    </nav>
+  </footer>
 
   <script src="app.js"></script>
 
   <script>
-    let map;
-    let userLocation;
+    // Show the location access modal when the page loads
+    window.onload = function() {
+      document.getElementById("locationModal").style.display = "flex";
+    };
 
-    // Initialize Google Map
-    function initMap() {
-      // Default location (New York City)
-      const defaultLocation = { lat: 40.7128, lng: -74.0060 };
+    // Handle allow button click
+    document.getElementById("allowLocationBtn").addEventListener("click", function() {
+      console.log("Allow button clicked");
+      document.getElementById("locationModal").style.display = "none";
+      // You can add your location logic here (e.g., getUserLocation())
+    });
 
-      // Map options
-      map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: defaultLocation,
-      });
-
-      // Show location modal
-      showLocationModal();
-
-      // Watch for location access permission
-      document.getElementById("allowLocationBtn").addEventListener("click", () => {
-        getUserLocation();
-        document.getElementById("locationModal").style.display = "none";
-      });
-
-      document.getElementById("denyLocationBtn").addEventListener("click", () => {
-        alert("Location access denied.");
-        document.getElementById("locationModal").style.display = "none";
-      });
-    }
-
-    // Request location access
-    function getUserLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            userLocation = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            };
-
-            // Center the map on user's location
-            map.setCenter(userLocation);
-            new google.maps.Marker({
-              position: userLocation,
-              map: map,
-              title: "You are here",
-            });
-          },
-          () => {
-            alert("Unable to retrieve your location.");
-          }
-        );
-      } else {
-        alert("Geolocation is not supported by this browser.");
-      }
-    }
-
-    // Show the location access modal
-    function showLocationModal() {
-      document.getElementById("locationModal").style.display = "block";
-    }
+    // Handle deny button click
+    document.getElementById("denyLocationBtn").addEventListener("click", function() {
+      console.log("Deny button clicked");
+      alert("Location access denied.");
+      document.getElementById("locationModal").style.display = "none";
+    });
   </script>
 
 </body>
