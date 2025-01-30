@@ -17,3 +17,10 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 # In progress #
 - Currently working on the Sign up page and the other sign in options for the login/sign up page
 - Adding logos to the bottom nav bar.
+# Jackeline Ardiles Notes #
+- Added the Current Favorite Business and Current Favorite Drink
+- Added images to both Favorite Business and Favorite Drink
+- Added the Event Bannner
+- Added the Timeline / Flavor Profile
+- Added the Latest Memory and Entry with a Photo
+- Committed the HTML to drinkdiary.html, Committed the CSS to the drinkdiary.html section of the CSS, Added the Images to the Image folder under drinkdiaryimages
