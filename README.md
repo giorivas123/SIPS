@@ -24,3 +24,4 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 - Added the Timeline / Flavor Profile
 - Added the Latest Memory and Entry with a Photo
 - Committed the HTML to drinkdiary.html, Committed the CSS to the drinkdiary.html section of the CSS, Added the Images to the Image folder under drinkdiaryimages
+- Changed the color of the Event Banner and Entry Button to ones that correspond with the color palette
