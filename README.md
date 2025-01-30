@@ -10,7 +10,7 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 # Giovanni Rivas Notes #
 - Added basic function of the app (Terms & Conditions, Login Page, Home Page with added bottom nav bar) (1/20/25)
 -  Added all of the pages back to git. Acidentally deleted current README file (sorry kayla & jackie). Added appropriate folders to images folder to seperate each page. 
-# In progress# 
+# In progress # 
 - Still looking over comments on code to revise. As well as looking over excess code in style.css. 
 # Eliana Villanueva Notes #
 - added to favorites page (images & example favorites)
