@@ -10,85 +10,71 @@
 
   <!-- Main Drink Diary Page -->
   <div id="content">
-    <header class="header">
-      <h1>Drink Diary</h1>
-      <button id="addEntryBtn">+ Add Entry</button>
+    
+  <br>
+  
+      <button id="addEntryBtn">+</button> <!-- Only the + sign here -->
     </header>
+<br>
+  <div class="favorites-section">
+  <div class="entry-container">
+    <div class="entry">
+      <img src="images/drinkdiaryimages/currentfavoritebusiness.jpg" alt="Favorite Business" class="entry-image" style="width: 95px; height:95px; object-fit: cover; border-radius: 5px;">
+    </div>
+    <p class="entry-info">Current Favorite Business</p>
+  </div>
 
-    <!-- Current Entries -->
-    <section class="current-entries">
-      <h2>Current Favorite Drink Entries</h2>
-      <div class="entry">
-        <img src="images/xo-coffee.jpg" alt="XO Coffee" class="entry-image">
-        <div class="entry-info">
-          <h3>XO Coffee</h3>
-          <p>Favorite drink of the week</p>
-        </div>
-        <button class="edit-entry-btn">Edit Entry</button>
+  <div class="entry-container">
+    <div class="entry">
+      <img src="images/drinkdiaryimages/currentfavoritedrink.jpg" alt="Favorite Drink" class="entry-image" style="width: 95px; height: 95px; object-fit: cover; border-radius: 5px;">
+    </div>
+    <p class="entry-info">Current Favorite Drink</p>
+  </div>
+</div>
+
+    
+
+    <!-- Next Event Banner (Below Favorite Boxes) -->
+    <section class="next-event-banner">
+      <div class="banner-content">
+        <h2>Next Event:</h2>
+        <p>Vinyl & Brews 3 Days</p>
       </div>
-
-      <div class="entry">
-        <img src="images/milk-tea.jpg" alt="Milk Tea" class="entry-image">
-        <div class="entry-info">
-          <h3>Milk Tea</h3>
-          <p>Refreshing flavor enjoyed this weekend</p>
-        </div>
-        <button class="edit-entry-btn">Edit Entry</button>
-      </div>
-
-      <!-- Add more entries here -->
     </section>
 
     <!-- Flavor Profile/Timeline Section -->
     <section class="flavor-profile">
-      <h2>Flavor Profile / Timeline</h2>
+      <h2>Flavor Profile & Timeline</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <h4>XO Coffee</h4>
+          <h4>XO Coffee 2x This Week</h4>
           <p>Sweet & Bitter</p>
         </div>
         <div class="timeline-item">
-          <h4>Milk Tea</h4>
+          <h4>Milk Tea 1x This Week</h4>
           <p>Sweet & Creamy</p>
         </div>
         <div class="timeline-item">
-          <h4>Premium Matcha</h4>
+          <h4>Premium Matcha 4x Last Week</h4>
           <p>Earthy & Slightly Sweet</p>
         </div>
       </div>
     </section>
 
+    <!-- Latest Memory & Entry (Moved to the bottom) -->
+    <section class="latest-memory-entry">
+      <h2>Latest Memory & Entry</h2>
+
+      <div class="entry">
+        <img src="images/drinkdiaryimages/latestmemory.jpg" alt="Milk Tea" class="entry-image" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;">
+        <div class="entry-info">
+          <h3>Refreshing Time</h3>
+          <p>Had a great time exploring a new drink spot with friends, enjoying unique flavors and great company!</p>
+    </section>
+
   </div>
 
   <!-- Footer with Bottom Navigation Bar -->
-<!-- Footer with Bottom Navigation Bar -->
-<footer>
-  <nav class="bottom-nav">
-    <ul>
-      <li><a href="home.html">
-          <span class="icon">🏠</span>
-          <span>Home</span>
-        </a></li>
-      <li><a href="favorites.html">
-          <span class="icon">⭐</span>
-          <span>Favorites</span>
-        </a></li>
-      <li><a href="maps.html">
-          <span class="icon">🗺️</span>
-          <span>Map</span>
-        </a></li>
-      <li><a href="drinkdiary.html">
-          <span class="icon">🍹</span>
-          <span>Drink Diary</span>
-        </a></li>
-      <li><a href="profile.html">
-          <span class="icon">👤</span>
-          <span>Profile</span>
-        </a></li>
-    </ul>
-  </nav>
-</footer>
-
 
   <script src="app.js"></script>
   <script>
