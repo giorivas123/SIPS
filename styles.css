@@ -487,7 +487,7 @@ footer {
   padding: 5px 0;
 }
 
-/* Drink Diary */
+/* drinkdiary-entry.html */
 /* General Styles */
 
 /* Form Styles */
@@ -530,48 +530,152 @@ footer {
   background-color: #115E40;
 }
 
-/* Drink Diary Page */
+/* drinkdiary.html Page */
 .current-entries {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.entry-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
 }
 
 .entry {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
   background-color: #fff;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width of container */
+  text-align: center;
 }
 
+/* Image inside the entry box */
 .entry-image {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
-  margin-right: 1rem;
 }
 
+/* Ensure text is below the container */
 .entry-info {
-  flex-grow: 1;
-}
-
-.entry-info h3 {
-  font-size: 1.2rem;
-}
-
-.entry-info p {
-  color: #777;
-}
-
-.edit-entry-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
+  margin-top: 0.5rem; /* Creates space between box and text */
+  text-align: center;
   font-size: 1rem;
-  color: #0078d4;
-  text-decoration: underline;
+  font-weight: bold;
+  color: #333;
 }
+
+
+/* Move Add Entry Button Above the Favorites Section */
+#addEntryBtn {
+  position: absolute;
+  top: -60px; /* Move the button 60px above its default position */
+  right: 10px; /* Keep it on the right */
+  background-color: #169aff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+#addEntryBtn:hover {
+  background-color: #0f7ac8; /* Darker hover effect */
+}
+
+/* Hide or Remove Extra Container Next to the Button */
+.container-next-to-button {
+  display: none; /* Hide the container causing the issue */
+}
+
+/* Current Favorite Business and Drink Section */
+.favorites-section {
+  display: flex;
+  justify-content: center; /* Center aligns the section */
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-top: rem; /* Adds space above the favorites section */
+  margin-bottom: 0rem;
+}
+
+/* Adjust the entry-container to avoid overlap with other elements */
+.entry-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  margin: 0 0.4rem;
+}
+
+/* Ensure the text is separate from the box */
+.favorite-text {
+  margin-top: 0.75rem; /* Increased space between box and text */
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Next Event Banner */
+.next-event-banner {
+  background-color: #169aff; /* Banner color */
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.next-event-banner h2 {
+  margin-bottom: 0.5rem;
+}
+
+.next-event-banner p {
+  font-size: 1rem;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 600px) {
+  /* Adjust button and header for mobile */
+  #addEntryBtn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    top: 5px;
+    right: 5px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Keep the two entries side by side on mobile */
+  .favorites-section {
+    display: flex;
+    flex-direction: row; /* Ensure they stay side by side */
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent stacking */
+    gap: 1.5rem;
+  }
+
+  .entry-container {
+    width: 48%; /* Ensures two items fit side by side */
+  }
+
+  /* Adjust text spacing */
+  .favorite-text {
+    margin-top: 0.75rem;
+  }
+
+  /* Adjust for the next event banner on mobile */
+  .next-event-banner {
+    padding: 0.8rem;
+  }
+} 
+
 /* General Profile Styles */
 
 /* Profile Section */
