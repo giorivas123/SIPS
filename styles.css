@@ -573,7 +573,7 @@ footer {
   position: absolute;
   top: -60px; /* Move the button 60px above its default position */
   right: 10px; /* Keep it on the right */
-  background-color: #169aff;
+  background-color: #9db5ba;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -622,7 +622,7 @@ footer {
 
 /* Next Event Banner */
 .next-event-banner {
-  background-color: #169aff; /* Banner color */
+  background-color: #9db5ba; /* Banner color */
   color: white;
   padding: 1rem;
   margin-bottom: 2rem;
