@@ -1269,3 +1269,96 @@ footer {
 #actionModal button:hover {
   background-color: #115E40;
 }
+/* General Setting Styles */
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        position: relative; 
+        height: 80px; 
+      }
+    .logo-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%; 
+      }
+    .logo-image {
+        max-width: 150px; 
+        height: auto; 
+    }
+    /* Title */
+    .settings-title {
+        font-size: 25px; 
+        font-weight: bold; 
+        text-align: center; 
+        margin: 20px 0; 
+    }
+    /* Body of page */
+    .body {
+        background-color: #e9e2d7; 
+        margin: 0;
+        padding: 0;
+    }
+     #content {
+        background-color: #e9e2d7; 
+        min-height: 100vh; 
+        padding: 20px;
+    }
+    .header {
+        background-color: white; 
+        padding: 20px 0;
+        width: 100%;
+        position: relative;
+    }
+    .section-title {
+        color: darkgray; 
+        font-size: 18px; 
+      }
+    ul {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+        width: 100%; 
+    }  
+    ul li {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #ccc; 
+        font-size: 18px; 
+    } 
+    ul li:last-child {
+        border-bottom: none; 
+    } 
+    .arrow {
+        margin-left: auto; 
+    }
+    ul li a {
+        text-decoration: none; 
+        color: black; 
+        font-weight: bold; 
+    }
+      
+      ul li a:hover {
+        color: gray; 
+    }
+    .login-info {
+        color: orange; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+    .logout {
+        color: red; 
+        text-decoration: none; 
+        font-weight: bold; 
+    }
+    .login-info:hover {
+        color: darkorange; 
+    }
+    .logout:hover {
+        color: darkred; 
+    }
