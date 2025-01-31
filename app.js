@@ -123,3 +123,26 @@ document.getElementById('trash-btn').addEventListener('click', function () {
     item.closest('.favorite-item').remove(); // Remove the entire item
   });
 });
+let index = 0;
+const timeline = document.querySelector(".timeline-content");
+const totalItems = document.querySelectorAll(".timeline-box").length;
+
+// Moves the timeline manually
+function moveTimeline(direction) {
+  index += direction;
+  if (index < 0) index = totalItems - 1;
+  if (index >= totalItems) index = 0;
+  timeline.style.transition = "transform 0.8s ease-in-out";
+  timeline.style.transform = `translateX(${-index * 160}px)`;
+}
+
+// Stops animation when hovered
+timeline.addEventListener("mouseenter", () => {
+  timeline.style.animationPlayState = "paused";
+});
+
+// Resumes animation when mouse leaves
+timeline.addEventListener("mouseleave", () => {
+  timeline.style.animationPlayState = "running";
+});
+
