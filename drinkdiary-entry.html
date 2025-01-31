@@ -10,60 +10,38 @@
 
   <!-- Add/Edit Drink Entry -->
   <div id="content">
-    <header class="header">
-      <button onclick="window.history.back()">← Back</button>
-      <h1>Drink Diary Entry</h1>
+    
+    <!-- Header with Custom Back Button -->
+    <header class="entry-header">
+      <a href="javascript:window.history.back()" class="back-button">
+        <img src="images/icons/arrow.png" alt="Back">
+      </a>
+      <h1 class="entry-title">Drink Diary Entry</h1>
     </header>
 
+    <!-- Form Section -->
     <section class="entry-form">
       <form id="diaryEntryForm">
-        <label for="drink-name">Drink Name:</label>
-        <input type="text" id="drink-name" name="drink-name" placeholder="Enter drink name" required>
+        
+        <div class="form-group">
+          <label for="drink-name">Drink Name:</label>
+          <input type="text" id="drink-name" name="drink-name" placeholder="Enter drink name" required>
+        </div>
 
-        <label for="drink-description">Description:</label>
-        <textarea id="drink-description" name="drink-description" rows="4" placeholder="Enter drink description"></textarea>
+        <div class="form-group">
+          <label for="drink-description">Description:</label>
+          <textarea id="drink-description" name="drink-description" rows="4" placeholder="Enter drink description"></textarea>
+        </div>
 
-        <label for="drink-photo">Upload Photo:</label>
-        <input type="file" id="drink-photo" name="drink-photo">
+        <div class="form-group">
+          <label for="drink-photo">Upload Photo:</label>
+          <input type="file" id="drink-photo" name="drink-photo">
+        </div>
 
-        <button type="submit">Save Entry</button>
+        <button type="submit" class="save-button">Save Entry</button>
       </form>
     </section>
   </div>
-
-  <!-- Footer with Bottom Navigation Bar -->
-<!-- Footer with Bottom Navigation Bar -->
-  <footer>
-    <nav class="bottom-nav">
-      <ul>
-        <li><a href="home.html">
-            <img src="images/icons/home.png" alt="Home" class="nav-icon">
-            <span>Home</span>
-          </a>
-        </li>
-        <li><a href="favorites.html">
-            <img src="images/icons/star.png" alt="Favorites" class="nav-icon">
-            <span>Favorites</span>
-          </a>
-        </li>
-        <li><a href="maps.html">
-            <img src="images/icons/location.png" alt="Map" class="nav-icon">
-            <span>Map</span>
-          </a>
-        </li>
-        <li><a href="drinkdiary.html">
-            <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon">
-            <span>Drink Diary</span>
-          </a>
-        </li>
-        <li><a href="profile.html">
-            <img src="images/icons/user.png" alt="Profile" class="nav-icon">
-            <span>Profile</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </footer>
 
   <script src="app.js"></script>
   <script>
@@ -77,13 +55,13 @@
 
       if (drinkName && drinkDescription) {
         alert("Entry saved successfully!");
-        // Here you can save the entry to a database or local storage
-        // Redirect back to the main drink diary page
         window.location.href = "drinkdiary.html";
       } else {
         alert("Please fill out the fields.");
       }
     });
   </script>
+
 </body>
 </html>
+
