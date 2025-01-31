@@ -8,79 +8,127 @@
 </head>
 <body>
 
-  <!-- Main Drink Diary Page -->
   <div id="content">
-    
-  <br>
-  
-      <button id="addEntryBtn">+</button> <!-- Only the + sign here -->
-    </header>
-<br>
-  <div class="favorites-section">
-  <div class="entry-container">
-    <div class="entry">
-      <img src="images/drinkdiaryimages/currentfavoritebusiness.jpg" alt="Favorite Business" class="entry-image" style="width: 95px; height:95px; object-fit: cover; border-radius: 5px;">
+      <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <a href="settings.html">
+        <img src="images/icons/gear.png" alt="Settings" class="settings-icon">
+      </a>
     </div>
-    <p class="entry-info">Current Favorite Business</p>
-  </div>
-
-  <div class="entry-container">
-    <div class="entry">
-      <img src="images/drinkdiaryimages/currentfavoritedrink.jpg" alt="Favorite Drink" class="entry-image" style="width: 95px; height: 95px; object-fit: cover; border-radius: 5px;">
-    </div>
-    <p class="entry-info">Current Favorite Drink</p>
-  </div>
-</div>
-
     
+    <div class="nav-center">
+      <img src="images/sips-logo.png" alt="SIPS Logo" class="logo-image">
+      </nav>
+    </div>
+    
+    <div class="nav-right">
+      <a href="drinkdiary-entry.html" id="search-btn">
+        <img src="images/icons/plus.png" alt="Add Entry" class="plus-icon">
+      </a>
+    </div>
+  </header>
+    <!-- Favorite Business & Favorite Drink -->
+    <section class="favorites-section">
+      <div class="favorite-box">
+        <img src="images/drinkdiaryimages/currentfavoritebusiness.jpg" alt="Favorite Business">
+        <p>Current Favorite Business</p>
+      </div>
+      <div class="favorite-box">
+        <img src="images/drinkdiaryimages/currentfavoritedrink.jpg" alt="Favorite Drink">
+        <p>Current Favorite Drink</p>
+      </div>
+    </section>
 
-    <!-- Next Event Banner (Below Favorite Boxes) -->
+    <!-- Next Event Banner -->
     <section class="next-event-banner">
-      <div class="banner-content">
-        <h2>Next Event:</h2>
-        <p>Vinyl & Brews 3 Days</p>
-      </div>
+      <div class="event-icon">❗</div>
+      <h2>Next event in 3 days</h2>
     </section>
 
-    <!-- Flavor Profile/Timeline Section -->
+    <!-- Flavor Profile & Timeline -->
     <section class="flavor-profile">
-      <h2>Flavor Profile & Timeline</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>XO Coffee 2x This Week</h4>
-          <p>Sweet & Bitter</p>
+      <h2>Flavor Profile/Timeline</h2>
+      <div class="timeline-slider">
+        <button class="prev" onclick="moveTimeline(-1)">❮</button>
+        <div class="timeline-wrapper">
+          <div class="timeline-content">
+            <div class="timeline-box">2023: Matcha Latte</div>
+            <div class="timeline-box">2024: XO Coffee</div>
+            <div class="timeline-box">2025: Exotic Teas</div>
+            <div class="timeline-box">2026: New Espresso</div>
+            <div class="timeline-box">2027: Iced Lattes</div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h4>Milk Tea 1x This Week</h4>
-          <p>Sweet & Creamy</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Premium Matcha 4x Last Week</h4>
-          <p>Earthy & Slightly Sweet</p>
-        </div>
+        <button class="next" onclick="moveTimeline(1)">❯</button>
       </div>
     </section>
-
-    <!-- Latest Memory & Entry (Moved to the bottom) -->
+    
+    <!-- Latest Memory & Entry -->
     <section class="latest-memory-entry">
-      <h2>Latest Memory & Entry</h2>
-
-      <div class="entry">
-        <img src="images/drinkdiaryimages/latestmemory.jpg" alt="Milk Tea" class="entry-image" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;">
-        <div class="entry-info">
-          <h3>Refreshing Time</h3>
-          <p>Had a great time exploring a new drink spot with friends, enjoying unique flavors and great company!</p>
+        <!-- 🔹 Section Title -->
+        <h2 class="latest-memory-title">Latest Memory & Entry</h2>
+      <div class="post-card">
+        
+        <!-- 🔹 Profile Section -->
+        <div class="post-header">
+          <img src="images/profile-picture.jpg" alt="User Profile" class="profile-pic">
+          <div class="post-user">
+            <h4>Latest Memory</h4>
+            <p>Shared a memory at <strong>XO Coffee</strong></p>
+          </div>
+        </div>
+    
+        <!-- 🔹 Image & Caption -->
+        <div class="post-content">
+          <img src="images/drinkdiaryimages/latestmemory.jpg" alt="Latest Memory">
+          <p class="post-description">Had an amazing time at <strong>XO Coffee</strong> with friends! The Matcha Latte was incredible. Highly recommend! ☕✨</p>
+        </div>
+    
+        <!-- 🔹 Like & Comment Buttons -->
+        <div class="post-actions">
+          <button class="like-btn">❤️ Like</button>
+          <button class="comment-btn">💬 Comment</button>
+        </div>
+          <!-- Bottom Navigation Bar -->
+  <footer>
+    <nav class="bottom-nav">
+      <ul>
+        <li><a href="home.html">
+            <img src="images/icons/home.png" alt="Home" class="nav-icon">
+            <span>Home</span>
+          </a>
+        </li>
+        <li><a href="favorites.html">
+            <img src="images/icons/star.png" alt="Favorites" class="nav-icon">
+            <span>Favorites</span>
+          </a>
+        </li>
+        <li><a href="maps.html">
+            <img src="images/icons/location.png" alt="Map" class="nav-icon">
+            <span>Map</span>
+          </a>
+        </li>
+        <li><a href="drinkdiary.html">
+            <img src="images/icons/diary.png" alt="Drink Diary" class="nav-icon">
+            <span>Drink Diary</span>
+          </a>
+        </li>
+        <li><a href="profile.html">
+            <img src="images/icons/user.png" alt="Profile" class="nav-icon">
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  
+    
+      </div>
     </section>
-
-  </div>
-
-  <!-- Footer with Bottom Navigation Bar -->
+    
+  </div> 
 
   <script src="app.js"></script>
-  <script>
-    document.getElementById("addEntryBtn").addEventListener("click", function() {
-      window.location.href = "drinkdiary-entry.html"; // Redirect to the add entry page
-    });
-  </script>
 </body>
 </html>
