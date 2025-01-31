@@ -120,7 +120,7 @@ document.getElementById('trash-btn').addEventListener('click', function () {
   // Select all checked favorite items
   const selectedItems = document.querySelectorAll('.select-favorite:checked');
   selectedItems.forEach(item => {
-    item.closest('.favorite-item').remove(); // Remove the entire item
+    item.closest('.favorite-item').remove(); 
   });
 });
 let index = 0;
