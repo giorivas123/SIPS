@@ -106,7 +106,7 @@ footer {
   width: 100%;
   background-color: white;
   border-top: 1px solid #ccc;
-  z-index: 999; /* Ensure the nav bar is on top */
+  z-index: 999; /* Ensures that the nav bar is on top */
 }
 
 .bottom-nav {
@@ -141,22 +141,22 @@ footer {
 }
 
 .bottom-nav .icon {
-  font-size: 2rem; /* Increase emoji size */
+  font-size: 2rem; /* Increases emoji size */
   margin-bottom: 0.3rem;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
   .bottom-nav ul {
-    flex-direction: column; /* Stack items on smaller screens */
+    flex-direction: column; /* Stacks the items on smaller screens */
   }
 
   .bottom-nav .icon {
-    font-size: 1.5rem; /* Slightly reduce icon size on smaller screens */
+    font-size: 1.5rem; /* Slightly reducing the icon size on smaller screens */
   }
 
   #content {
-    padding: 1rem; /* Add padding for smaller screen */
+    padding: 1rem; 
   }
 }
 
@@ -175,7 +175,7 @@ footer {
 }
 /* Logo Styling */
 .logo-image {
-  height: 100px; /* Adjust the height of the logo */
+  height: 100px; 
   width: auto;  /* Maintain aspect ratio */
 }
 
@@ -255,18 +255,18 @@ header .search-bar input {
   margin: 1rem 0;
 }
 
-/* Adjust the layout of the post actions */
+/* Adjusts the layout of the post actions */
 .post-actions {
   display: flex;
   align-items: center;
-  margin-top: -30px;  /* Reduce the space between the caption and the action buttons */
+  margin-top: -30px;  
 }
 
 .post-actions button {
   background: none;
   border: none;
   font-size: 1.5rem;
-  margin-right: 0.5rem;  /* Reduce the margin between the buttons */
+  margin-right: 0.5rem;  
   cursor: pointer;
 }
 
@@ -277,7 +277,7 @@ header .search-bar input {
 .post-caption {
   padding: 10px;
   background: rgba(255, 255, 255, 0.8);
-  margin-top: 0px;  /* Reduced margin to bring the action buttons closer */
+  margin-top: 0px;  
 }
 
 
@@ -547,7 +547,7 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Full width of container */
+  width: 100%; 
   text-align: center;
 }
 
@@ -560,7 +560,7 @@ footer {
 
 /* Ensure text is below the container */
 .entry-info {
-  margin-top: 0.5rem; /* Creates space between box and text */
+  margin-top: 0.5rem; 
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -571,8 +571,8 @@ footer {
 /* Move Add Entry Button Above the Favorites Section */
 #addEntryBtn {
   position: absolute;
-  top: -60px; /* Move the button 60px above its default position */
-  right: 10px; /* Keep it on the right */
+  top: -60px; 
+  right: 10px; 
   background-color: #9db5ba;
   color: white;
   border: none;
@@ -587,7 +587,6 @@ footer {
   background-color: #0f7ac8; /* Darker hover effect */
 }
 
-/* Hide or Remove Extra Container Next to the Button */
 .container-next-to-button {
   display: none; /* Hide the container causing the issue */
 }
@@ -595,10 +594,10 @@ footer {
 /* Current Favorite Business and Drink Section */
 .favorites-section {
   display: flex;
-  justify-content: center; /* Center aligns the section */
+  justify-content: center; 
   gap: 2rem;
   padding: 1rem 0;
-  margin-top: rem; /* Adds space above the favorites section */
+  margin-top: rem; 
   margin-bottom: 0rem;
 }
 
@@ -613,7 +612,7 @@ footer {
 
 /* Ensure the text is separate from the box */
 .favorite-text {
-  margin-top: 0.75rem; /* Increased space between box and text */
+  margin-top: 0.75rem; 
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -622,7 +621,7 @@ footer {
 
 /* Next Event Banner */
 .next-event-banner {
-  background-color: #9db5ba; /* Banner color */
+  background-color: #9db5ba; 
   color: white;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -657,7 +656,7 @@ footer {
     display: flex;
     flex-direction: row; /* Ensure they stay side by side */
     justify-content: space-between;
-    flex-wrap: nowrap; /* Prevent stacking */
+    flex-wrap: nowrap; /* Prevents stacking */
     gap: 1.5rem;
   }
 
@@ -1249,7 +1248,7 @@ button:hover {
 /* Nav List */
 .bottom-nav ul {
   display: flex;
-  flex-direction: row; /* Forces items to be in a row */
+  flex-direction: row; 
   flex-wrap: nowrap; /* Prevents items from stacking */
   justify-content: space-between;
   align-items: center;
@@ -1273,7 +1272,7 @@ button:hover {
   display: flex;
   flex-direction: column; /* Icon above text */
   align-items: center;
-  font-size: 12px; /* Adjusted font size */
+  font-size: 12px; 
   white-space: nowrap; /* Prevents text from wrapping */
 }
 
@@ -1298,7 +1297,7 @@ button:hover {
   }
 
   .bottom-nav a {
-    font-size: 10px; /* Reduce text size */
+    font-size: 10px; 
   }
 
   .bottom-nav .icon {
@@ -1318,7 +1317,7 @@ button:hover {
 .category-tabs ul {
   display: flex;
   gap: 15px;
-  list-style: none; /* Removes bullets */
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
@@ -1360,7 +1359,7 @@ button:hover {
 .nav-left,
 .nav-right {
   position: absolute;
-  top: 60px; /* Move down */
+  top: 60px; 
 }
 
 .nav-left {
@@ -1375,8 +1374,8 @@ button:hover {
 .logo-image {
   max-width: 120px;
   height: auto;
-  margin-top: 15px; /* Moves the logo slightly down */
-  margin-bottom: 8px; /* Adds space below the logo */
+  margin-top: 15px; 
+  margin-bottom: 8px; 
 }
 
 
@@ -1430,8 +1429,8 @@ button:hover {
 /* Prevent horizontal scroll */
 /* Slightly move the content to the left */
 html, body {
-  margin-left: -20px;  /* Adjust this value to move the page to the left */
-  padding-left: 20px;  /* Ensure everything inside the body is also moved to the right */
+  margin-left: -20px;  
+  padding-left: 20px;  
 }
 
 /* Ensure the feed section doesn't overflow horizontally */
@@ -1440,7 +1439,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Add any additional styling for your posts if needed */
 .post {
   max-width: 100%;
   overflow: hidden;
@@ -1448,7 +1446,7 @@ html, body {
 /* Adjust the white bar position */
 .post-header {
   position: absolute;
-  top: 32px;  /* Increase this value to move the white bar down */
+  top: 32px;  
   left: 30px;
   background: rgba(255, 255, 255, 0.8);
   padding: 8px;
@@ -1461,60 +1459,60 @@ html, body {
 .post-caption {
   padding: 10px;
   background: rgba(255, 255, 255, 0.8);
-  margin-top: 10px;  /* Adjust this value to add more space between caption and post image */
+  margin-top: 10px;  
 }
 /* Style for the icons in the bottom navigation */
 .nav-icon {
-  width: 24px;  /* Adjust the width of the icons */
-  height: 24px; /* Adjust the height of the icons */
-  object-fit: contain; /* Ensures icons maintain their aspect ratio */
-  margin-bottom: 4px; /* Add space between the icon and the text */
+  width: 24px;  
+  height: 24px; 
+  object-fit: contain; 
+  margin-bottom: 4px; 
 }
 
 /* Adjust the bottom navigation list */
 .bottom-nav ul {
   display: flex;
-  justify-content: space-around; /* Space out the icons evenly */
+  justify-content: space-around; 
   padding: 0;
   list-style-type: none;
-  width: 100%; /* Ensure the nav takes full width for better alignment */
+  width: 100%; /* Ensures the nav takes full width for better alignment */
 }
 
 .bottom-nav ul li {
   display: flex;
-  flex-direction: column; /* Stack the icon and text vertically */
-  align-items: center; /* Center the icon and text horizontally */
-  text-align: center; /* Ensure the text is centered */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 /* Adjust padding to move the home button slightly to the right */
 .bottom-nav ul li:first-child {
-  margin-left: 10px; /* Shift the home button slightly to the right */
+  margin-left: 10px; 
 }
 
 .bottom-nav ul li a {
   text-decoration: none;
   display: flex;
-  flex-direction: column; /* Stack the icon and text vertically */
-  align-items: center; /* Center the icon and text */
-  color: #000;  /* Adjust the text color */
+  flex-direction: column; 
+  align-items: center; 
+  color: #000;  
 }
 
 /* Hover effect for the links */
 .bottom-nav ul li a:hover {
-  color: #0078d4; /* Optional: Add hover effect */
+  color: #0078d4; 
 }
 
 .bottom-nav ul li span {
-  font-size: 12px; /* Adjust the font size of the text */
-  margin-top: 4px; /* Add some space between the icon and the text */
+  font-size: 12px; 
+  margin-top: 4px; 
 }
 
 /* Adjust the size of the magnifier icon */
 .search-icon {
-  width: 24px;  /* Set the desired width of the icon */
-  height: 24px; /* Set the desired height of the icon */
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+  width: 24px;  
+  height: 24px; 
+  object-fit: contain; 
 }
 /* General Profile Styles */
 
@@ -1667,66 +1665,65 @@ html, body {
       color: #3e3e3ee8;
       }
 .profile-avatar {
-  width: 110px;  /* Adjust this size as needed */
-  height: 100px;  /* Keep it the same as width for a perfect circle */
-  border-radius: 50%;  /* Makes the image round */
-  object-fit: cover;  /* Ensures the image fits within the circle without stretching */
-  border: 2px solid #000;  /* Optional: add a border for better visibility */
-  margin-right: 15px;  /* Adjust space between the image and the username */
+  width: 110px;  
+  height: 100px;  
+  border-radius: 50%;  
+  object-fit: cover;  
+  border: 2px solid #000;  
+  margin-right: 15px;  
 }
 /* Align the Username and Profile Picture*/
 .profile-header {
   display: flex;
-  align-items: center; /* Aligns the avatar and username horizontally */
-  margin-bottom: 20px; /* Space below the profile header */
-}
+  align-items: center; 
+  margin-bottom: 20px; 
 
 .profile-details h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-  padding-left: 15px; /* Add space between avatar and text */
+  padding-left: 15px; 
 }
 
 .profile-details p {
   font-size: 0.9rem;
-  color: #777; /* Grey color for the bio text */
+  color: #777; 
   margin-top: 5px;
 }
 .profile-header {
   display: flex;
-  flex-direction: column; /* Stack the avatar and username vertically */
-  align-items: center; /* Center the elements horizontally */
+  flex-direction: column; 
+  align-items: center; 
   margin-bottom: 20px;
 }
 
 .profile-avatar {
-  width: 100px;  /* Adjust this size as needed */
-  height: 100px;  /* Same as width for a perfect circle */
-  border-radius: 50%;  /* Makes the image round */
-  object-fit: cover;  /* Ensures the image fits within the circle without stretching */
-  border: 2px solid #000;  /* Optional: add a border for better visibility */
+  width: 100px; 
+  height: 100px;  
+  border-radius: 50%;  
+  object-fit: cover;  
+  border: 2px solid #000;  
 }
 
 .profile-details h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 10px;  /* Space between image and username */
+  margin-top: 10px;  
   padding: 0;
 }
 
 .profile-details p {
   font-size: 0.9rem;
-  color: #777; /* Grey color for the bio text */
+  color: #777; 
   margin-top: 5px;
 }
-/* this is the drink entry poste on the profile page */
+/* Drink Diary entry post on the profile page */
 .Diary-Entry {
   position: relative; /* This allows the pseudo-element to position itself relative to the section */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds some opacity to the section itself */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  overflow: hidden; /* Ensures no content overflows */
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px; 
+  overflow: hidden; 
 }
 
 .Diary-Entry::before {
@@ -1738,7 +1735,7 @@ html, body {
   height: 100%;
   background: url('images/profile/coffeeshop.jpg') no-repeat center center;
   background-size: cover;
-  filter: blur(3px); /* Apply blur effect */
+  filter: blur(3px); 
   z-index: -1; /* Ensure the background is behind the content */
 }
 
@@ -1746,29 +1743,29 @@ html, body {
 .diaryentry-details p,
 .diaryentry-footer h2 {
   color: #fff; /* Make sure the text is visible on top of the background */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow to the text to enhance readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 /* Profile info section */
 .profile-info {
-  text-align: center; /* Center-align the text */
+  text-align: center; 
 }
 
 /* Profile Avatar (image) */
 .profile-avatar {
-  width: 120px;  /* Adjust the size of the avatar */
+  width: 120px;  
   height: 120px;
-  border-radius: 50%; /* Circular image */
-  margin-top: 20px; /* Shift the profile picture down */
-  object-fit: cover; /* Ensures the image doesn't get distorted */
+  border-radius: 50%; 
+  margin-top: 20px; 
+  object-fit: cover; 
 }
 
 /* Profile details (name and stats) */
 .profile-details {
-  margin-top: 10px; /* Optional: Adjust the space between avatar and text */
+  margin-top: 10px; 
 }
 
 .profile-bio {
-  margin-top: 20px; /* Space between bio and other sections */
+  margin-top: 20px; 
 }
 
 /* Edit Profile button */
@@ -1855,36 +1852,36 @@ html, body {
 .memory-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;  /* Ensures the image and text are spaced correctly */
-  background-color: #f5f5f5; /* Grey background */
+  justify-content: space-between;  
+  background-color: #f5f5f5; 
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
-  gap: 15px; /* Adds space between image and text */
+  gap: 15px; 
 }
 
 .memory-photo {
-  width: 80px;  /* Adjust the size of the photo */
-  height: 80px; /* Make the image square */
-  border-radius: 10px; /* Rounded corners for the image */
-  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  width: 80px;  
+  height: 80px; 
+  border-radius: 10px; 
+  object-fit: cover; 
 }
 
 .memory-details {
-  flex: 1;  /* Ensures the text takes the remaining space */
+  flex: 1;  
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  word-wrap: break-word; /* Ensures text wraps inside the box */
-  margin-left: -30px; /* Shifts the text to the left */
+  word-wrap: break-word; 
+  margin-left: -30px; 
 }
 
 .memory-details h2 {
   margin: 0;
-  font-size: 0.8rem; /* Adjust font size */
-  white-space: normal; /* Allows wrapping of text */
-  overflow: hidden; /* Prevents text from spilling out */
+  font-size: 0.8rem; 
+  white-space: normal; 
+  overflow: hidden; 
 }
 
 #trashBtn {
@@ -1898,7 +1895,7 @@ html, body {
 }
 
 .trash-icon {
-  width: 30px;  /* Set a smaller size for the icon */
+  width: 30px;  
   height: 30px;
   object-fit: contain;
   transition: transform 0.2s ease; /* Adding smooth transition */
@@ -1910,7 +1907,7 @@ html, body {
 /* Adjusting nav-right to align items properly */
 .nav-right {
   display: flex;
-  align-items: center; /* Ensures the gear icon and trash icon are vertically aligned */
+  align-items: center; 
   justify-content: center;
   gap: 20px; /* Adjust the gap between the icons */
 }
@@ -1923,21 +1920,21 @@ html, body {
 }
 
 .trash-icon {
-  width: 30px;  /* Set a smaller size for the icon */
+  width: 30px;  
   height: 30px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
 .trash-icon:hover {
-  transform: scale(1.2); /* Slightly scale the icon when hovered */
+  transform: scale(1.2); 
 }
 /* Adjusting nav-right to align items properly */
 .nav-right {
   display: flex;
-  align-items: center; /* Ensures the gear icon and trash icon are vertically aligned */
+  align-items: center; 
   justify-content: center;
-  gap: 20px; /* Adjust the gap between the icons */
+  gap: 20px; 
 }
 
 /* Trash Icon Styling */
@@ -1948,20 +1945,20 @@ html, body {
 }
 
 .trash-icon {
-  width: 30px;  /* Set a smaller size for the icon */
+  width: 30px;  
   height: 30px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
 .trash-icon:hover {
-  transform: scale(1.2); /* Slightly scale the icon when hovered */
+  transform: scale(1.2); 
 }
 /* Adjust the position of the trash icon */
 .nav-right {
   display: flex;
-  align-items: center;  /* This keeps icons vertically aligned */
-  justify-content: flex-end;  /* Pushes icons to the right */
+  align-items: center;  
+  justify-content: flex-end;  
 }
 
 #trashBtn {
@@ -1969,19 +1966,18 @@ html, body {
   border: none;
   cursor: pointer;
   position: relative;
-  top: -20px;  /* Move the trash icon up */
-  right: -26px;  /* Move the trash icon slightly to the right */
+  top: -20px;  
+  right: -26px;  
 }
 
 .trash-icon {
-  width: 30px; /* Icon size */
+  width: 30px; 
   height: 20px;
   object-fit: contain;
 }
-/* Suggested Locations title closer to the underline */
 /* Set body background to white and remove any margins/padding */
 body {
-  background-color: white;  /* Ensures no grey background */
+  background-color: white;  
   margin: 0;
   padding: 0;
 }
@@ -1990,8 +1986,8 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #333;
-  text-align: center;     /* Align the title to the center */
-  border-bottom: 2px solid #333; /* Adds an underline */
+  text-align: center;     
+  border-bottom: 2px solid #333; 
   margin-top: 0;
   padding-bottom: 10px;
 }
@@ -2000,11 +1996,11 @@ body {
 .search-bar {
   width: 100%;
   padding: 10px;
-  margin-top: 130px; /* Ensures space below the top nav bar */
+  margin-top: 130px; 
   margin-bottom: 1;
   font-size: 16px;
-  border: 1px solid #ddd;  /* Border for the search bar */
-  background-color: white;  /* Ensure the background is white */
+  border: 1px solid #ddd;  
+  background-color: white;  
 }
 
 /* Map image container without extra space below */
@@ -2013,13 +2009,13 @@ body {
   max-width: 100%;
   overflow: hidden;
   display: block;
-  background-color: white;  /* Ensure no grey background */
-  margin-bottom: 0;  /* Ensure no space below the image */
+  background-color: white;  
+  margin-bottom: 0;  
 }
 
 #map-container img {
-  width: 100%; /* Ensures the image takes up the full width of the container */
-  height: auto; /* Maintains aspect ratio */
+  width: 100%; 
+  height: auto; 
   display: block;
 }
 
@@ -2035,16 +2031,16 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 180px; /* Smaller width */
-  height: 250px; /* Smaller height */
+  width: 180px; 
+  height: 250px; 
   background-size: cover;
   background-position: center;
-  padding: 10px; /* Adjust padding to keep text contained */
+  padding: 10px; 
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  color: white; /* Make text white to be visible on the background image */
-  position: relative; /* To position the blurred image */
-  overflow: hidden; /* Ensure that the blur doesn't overflow outside the box */
+  color: white; 
+  position: relative; 
+  overflow: hidden; 
 }
 
 /* Applying the blur effect on the image background */
@@ -2056,8 +2052,8 @@ body {
   right: 0;
   bottom: 0;
   background: inherit;
-  filter: blur(12px); /* Stronger blur effect */
-  z-index: -1; /* Ensure the blur is behind the text */
+  filter: blur(12px); 
+  z-index: -1; 
 }
 
 /* Hide the image since it's used as the background */
@@ -2067,16 +2063,16 @@ body {
 
 /* Text within each favorite item */
 .suggested-info h3 {
-  font-size: 16px; /* Adjust text size */
+  font-size: 16px; 
   margin-bottom: 5px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow to the text for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
 
 .suggested-info p {
   font-size: 12px; /* Adjust text size */
   text-align: center;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add shadow to the description */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
 }
 .forgot-password {
   display: block;
@@ -2104,12 +2100,12 @@ body {
 .favorites-section {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjusted gap for closer spacing */
+  gap: 10px; 
   padding: 20px;
 }
 
 .favorite-box {
-  width: 120px; /* Smaller boxes */
+  width: 120px; 
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -2232,27 +2228,26 @@ button.prev:hover, button.next:hover {
 /* Auto Sliding Animation */
 @keyframes autoSlide {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* Moves left infinitely */
+  100% { transform: translateX(-100%); } 
 }
 /* 🔹 Adjusting the padding for spacing */
 .favorites-section {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 90px; /* Controls the space around the section */
-  margin-top: 20px; /* Adjust this to move it lower */
+  padding: 90px; 
+  margin-top: 20px; 
 }
 
-/* 🔹 Additional padding for fine-tuning */
+/* Additional padding */
 .top-nav {
-  padding-bottom: 10px; /* Creates space under the navbar */
+  padding-bottom: 10px; 
 }
 
-/* 🔹 If more space is needed, increase this margin */
 .favorites-container {
-  margin-top: 30px; /* Fine-tune vertical position */
+  margin-top: 30px; 
 }
-/* 🔹 Post Card Layout */
+/* Post Card Layout */
 .post-card {
   max-width: 500px;
   margin: 20px auto;
@@ -2263,7 +2258,7 @@ button.prev:hover, button.next:hover {
   text-align: left;
 }
 
-/* 🔹 Profile Section */
+/* Profile Section */
 .post-header {
   display: flex;
   align-items: center;
@@ -2289,21 +2284,21 @@ button.prev:hover, button.next:hover {
   color: gray;
 }
 
-/* 🔹 Post Image */
+/* Post Image */
 .post-content img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
-/* 🔹 Post Description */
+/* Post Description */
 .post-description {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
-/* 🔹 Like & Comment Buttons */
+/* Like & Comment Buttons */
 .post-actions {
   display: flex;
   gap: 10px;
@@ -2328,14 +2323,14 @@ button.prev:hover, button.next:hover {
   justify-content: center;
   gap: 10px;
   padding: 80px;
-  margin-bottom: 5px; /* Decrease this value to reduce the gap */
+  margin-bottom: 5px; 
 }
 
 /* Reduce the top margin for the Next Event Banner */
 .next-event-banner {
   background: #e6e6e6;
   padding: 15px;
-  margin-top: 5px; /* Decrease this to bring it closer */
+  margin-top: 5px; 
   width: 90%;
   max-width: 600px;
   border-radius: 8px;
@@ -2343,27 +2338,25 @@ button.prev:hover, button.next:hover {
   align-items: center;
   justify-content: center;
 }
-/* 🔹 Styles for the Plus Icon in the Navbar */
+/* Styles for the Plus Icon in the Navbar */
 .plus-icon {
-  width: 20px;  /* Adjust size */
-  height: 20px; /* Adjust size */
+  width: 20px;  
+  height: 20px; 
   object-fit: contain;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
-/* 🔹 Add Hover Effect */
 .plus-icon:hover {
   transform: scale(1.1);
 }
 
-/* 🔹 Ensure Icon is Properly Aligned */
 .nav-right {
   display: flex;
   align-items: center;
   padding-right: 15px;
 }
-/* 🔹 General Reset */
+/* General Reset */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -2372,7 +2365,7 @@ body {
   text-align: center;
 }
 
-/* 🔹 Header Section */
+/* Header Section */
 .entry-header {
   display: flex;
   align-items: center;
@@ -2383,7 +2376,7 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-/* 🔹 Back Button */
+/* Back Button */
 .back-button {
   position: absolute;
   left: 15px;
@@ -2394,14 +2387,14 @@ body {
   color: #004225;
 }
 
-/* 🔹 Entry Title */
+/* Entry Title */
 .entry-title {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
-/* 🔹 Form Section */
+/* Form Section */
 .entry-form {
   max-width: 400px;
   margin: 20px auto;
@@ -2412,12 +2405,12 @@ body {
   text-align: left;
 }
 
-/* 🔹 Form Groups */
+/* Form Groups */
 .form-group {
   margin-bottom: 15px;
 }
 
-/* 🔹 Labels */
+/* Labels */
 .entry-form label {
   display: block;
   font-size: 14px;
@@ -2425,7 +2418,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* 🔹 Input Fields */
+/* Input Fields */
 .entry-form input,
 .entry-form textarea {
   width: 100%;
@@ -2435,7 +2428,6 @@ body {
   font-size: 14px;
 }
 
-/* 🔹 Save Button */
 .save-button {
   width: 100%;
   background: #004225;
@@ -2451,7 +2443,7 @@ body {
   background: #002815;
 }
 
-/* 🔹 Bottom Navigation Bar */
+/* Bottom Navigation Bar */
 .bottom-nav {
   background: white;
   border-top: 1px solid #ddd;
@@ -2486,7 +2478,7 @@ body {
   margin: auto;
 }
 
-/* 🔹 Responsive Tweaks */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .entry-title {
     font-size: 18px;
@@ -2501,7 +2493,7 @@ body {
     padding: 15px;
   }
 }
-/* 🔹 General Reset */
+/* General Reset */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -2510,7 +2502,7 @@ body {
   text-align: left;
 }
 
-/* 🔹 Header Section */
+/* Header Section */
 .entry-header {
   display: flex;
   align-items: center;
@@ -2520,7 +2512,7 @@ body {
   position: relative;
 }
 
-/* 🔹 Custom Back Button (Smaller Image) */
+/* Custom Back Button (Smaller Image) */
 .back-button img {
   width: 18px; /* Smaller arrow */
   height: auto;
@@ -2533,7 +2525,7 @@ body {
   align-items: center;
 }
 
-/* 🔹 Entry Title */
+/* Entry Title */
 .entry-title {
   font-size: 20px;
   font-weight: bold;
@@ -2542,7 +2534,7 @@ body {
   flex-grow: 1;
 }
 
-/* 🔹 Form Section */
+/* Form Section */
 .entry-form {
   max-width: 400px;
   margin: 20px auto;
@@ -2552,12 +2544,12 @@ body {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 🔹 Form Groups */
+/* Form Groups */
 .form-group {
   margin-bottom: 15px;
 }
 
-/* 🔹 Labels */
+/* Labels */
 .entry-form label {
   display: block;
   font-size: 14px;
@@ -2565,7 +2557,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* 🔹 Input Fields (Shifted More to Left) */
+/* Input Fields (Shifted More to Left) */
 .entry-form input,
 .entry-form textarea {
   width: 90%; /* Moves input boxes to the left */
@@ -2575,7 +2567,7 @@ body {
   font-size: 14px;
 }
 
-/* 🔹 Save Button */
+/* Save Button */
 .save-button {
   width: 100%;
   background: #004225;
@@ -2590,7 +2582,7 @@ body {
 .save-button:hover {
   background: #002815;
 }
-/* 🔹 Custom File Upload Container */
+/* Custom File Upload Container */
 .custom-file-upload {
   display: flex;
   align-items: center;
@@ -2603,7 +2595,7 @@ body {
   padding: 8px;
 }
 
-/* 🔹 Hide the Default File Input */
+/* Hide the Default File Input */
 .custom-file-upload input[type="file"] {
   opacity: 0;
   position: absolute;
@@ -2612,7 +2604,7 @@ body {
   cursor: pointer;
 }
 
-/* 🔹 Custom Styled Button */
+/* Custom Styled Button */
 .file-label {
   background: #004225;
   color: white;
@@ -2624,19 +2616,18 @@ body {
   border: none; 
 }
 
-/* 🔹 File Name Display */
+/* File Name Display */
 #file-name {
   font-size: 14px;
   color: gray;
   border: none; 
 }
 
-/* 🔹 Hover Effect */
+/* Hover Effect */
 .file-label:hover {
   background: #002815;
 }
 
-/* 🔹 Keep Everything Aligned */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -2644,7 +2635,7 @@ body {
 }
 
 
-/* 🔹 Bottom Navigation Bar */
+/* Bottom Navigation Bar */
 .bottom-nav {
   background: white;
   border-top: 1px solid #ddd;
@@ -2679,7 +2670,7 @@ body {
   margin: auto;
 }
 
-/* 🔹 Responsive Tweaks */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .entry-title {
     font-size: 18px;
