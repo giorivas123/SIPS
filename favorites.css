@@ -11,14 +11,14 @@
     margin: 0;
   }
   
-  /* Favorites Page Specific */
+  /* Favorites Page */
   #favorites-page {
-    padding-top: 60px; /* Space for fixed top nav */
-    margin: 0; /* Remove any extra margin */
-    width: 100%; /* Ensure full width */
+    padding-top: 60px; 
+    margin: 0; 
+    width: 100%; 
   }
   
-  /* Top Navigation Bar for favorites.html */
+  /* Top Navigation Bar */
   #favorites-page .top-nav {
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    z-index: 1000; /* Keep nav on top */
+    z-index: 1000; 
   }
   
   #favorites-page .top-nav .logo-image {
@@ -41,19 +41,19 @@
     text-decoration: none;
     color: #333;
   }
-  /* Content Area for favorites.html */
-/* Content Area for favorites.html */
+  
+/* Content Area */
 #favorites-page #content {
     padding: 15px;
-    padding-top: 100px; /* Adjust to prevent overlap with nav */
+    padding-top: 100px; 
     width: 100%;
-    margin-left: 0px; /* Move content to the left */
+    margin-left: 0px; 
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
-  /* Favorites List for favorites.html */
+  /* Favorites List */
   #favorites-page .favorites-list {
     display: flex;
     flex-direction: column;
@@ -77,21 +77,21 @@
     background-size: cover;
     background-position: center;
     margin: 5px 0;
-    align-items: center; /* Align all items (text, checkbox, heart) horizontally */
+    align-items: center; 
   }
   
-  /* Adjust Heart Icon */
+  /*  Heart Icon */
   #favorites-page .heart-icon {
     font-size: 1.8rem;
     color: red;
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 10px;  /* Adjust the margin for positioning */
+    margin-left: 10px;  
     display: inline-block;
   }
   
-  /* Adjust the checkbox and delete button placement */
+  /* Adjust button placement */
   #favorites-page .favorite-item input[type="checkbox"] {
     margin-right: 10px;
     cursor: pointer;
@@ -110,11 +110,11 @@
   #favorites-page .favorite-info h3 {
     margin: 0;
     font-size: 1.2rem;
-    text-align: center; /* Center align the title */
+    text-align: center; 
   }
   
   #favorites-page .favorite-info p {
     margin: 0;
     font-size: 0.9rem;
-    text-align: center; /* Center align the description */
+    text-align: center; 
   }
