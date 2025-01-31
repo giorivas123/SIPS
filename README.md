@@ -14,6 +14,7 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 - Still looking over comments on code to revise. As well as looking over excess code in style.css. 
 # Eliana Villanueva Notes #
 - added to favorites page (images & example favorites)
+- added/alter maps page and images (included css into the maps.html page)
 # In progress #
 - Currently working on the Sign up page and the other sign in options for the login/sign up page
 - Adding logos to the bottom nav bar.
