@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <!-- add drink entry -->
+  <!-- Add/Edit Drink Entry -->
   <div id="content">
     
-    <!-- header and back button -->
+    <!-- Header with Custom Back Button -->
     <header class="entry-header">
       <a href="javascript:window.history.back()" class="back-button">
         <img src="images/icons/arrow.png" alt="Back">
@@ -19,7 +19,7 @@
       <h1 class="entry-title">Drink Diary Entry</h1>
     </header>
 
-    <!-- form -->
+    <!-- Form Section -->
     <section class="entry-form">
       <form id="diaryEntryForm">
         
@@ -45,7 +45,7 @@
 
   <script src="app.js"></script>
   <script>
-    
+    // Handle form submission
     document.getElementById("diaryEntryForm").addEventListener("submit", function(event) {
       event.preventDefault();
       
