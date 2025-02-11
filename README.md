@@ -26,3 +26,24 @@ Hey team, this is where we will be working on **SIPS** together. All the code wi
 - Added the Latest Memory and Entry with a Photo
 - Committed the HTML to drinkdiary.html, Committed the CSS to the drinkdiary.html section of the CSS, Added the Images to the Image folder under drinkdiaryimages
 - Changed the color of the Event Banner and Entry Button to ones that correspond with the color palette
+
+
+Using Backend Portion MS6: 
+
+SIPS Backend Setup
+
+1: Installation (Dependencies & Setup)
+
+- Install Node.js (using terminal on VSC)
+
+  - Navigate to the backend folder and run: npm install (using terminal on VSC)
+
+2:  Compilation (Node.js Runtime)
+ 
+- Run the backend manually with:  node server.js (using terminal on VSC)
+
+3:  Starting the Backend
+
+- Start the backend using:  npm start (using terminal on VSC)
+ 
+  This launches the Express.js server on port 5050, enabling the signup and login function. 
