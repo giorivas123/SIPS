@@ -42,14 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
         ${logoHTML}
         <h1>Sign Up</h1>
         <form id="signup-form" class="auth-form">
-          <input type="text" class="input-field" placeholder="Full Name" required>
-          <input type="text" class="input-field" placeholder="Create Username" required>
-          <input type="password" class="input-field" placeholder="New Password" required>
-          <input type="password" class="input-field" placeholder="Confirm Password" required>
+          <input type="text" id="full-name" class="input-field" placeholder="Full Name" required>
+          <input type="text" id="username" class="input-field" placeholder="Create Username" required>
+          <input type="password" id="password" class="input-field" placeholder="New Password" required>
+          <input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password" required>
           <button type="submit" class="primary-btn">Create Account</button>
         </form>
+
+        <p class='signup-text' style="text-align: center; margin-top: 10px;">
+          Already have an account? <a href="#" id="toLogin" class="signup-link">Sign in</a>
+        </p>
+
         <div class='social-login'>
-          <p style="text-align: center;">Sign in with</p> <!-- Center-align the "Sign in with" text -->
+          <p style="text-align: center;">Sign in with</p>
           <div class='social-icons' style='display: flex; justify-content: center; gap: 20px;'>
             <img src='images/apple-icon.png' class='social-icon same-size' alt='Apple Login' style='width: 35px; height: 35px;' onclick="socialLogin('Apple')">
             <img src='images/google-icon.png' class='social-icon same-size' alt='Google Login' style='width: 35px; height: 35px;' onclick="socialLogin('Google')">
@@ -63,20 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
         ${logoHTML}
         <h1>Login</h1>
         <form id="login-form" class="auth-form">
-          <input type="text" class="input-field" placeholder="Username" required>
-          <input type="password" class="input-field" placeholder="Password" required>
-          <div class="options" style="display: flex; flex-direction: column; gap: 10px;">
-            <label><input type="checkbox"> Remember me</label>
-            <button type="submit" class="primary-btn">Sign In</button>
-            <a href="#" class="forgot-password" style="margin-top: 10px;">Forgot Password?</a> <!-- Forgot password placed below Sign In button -->
-          </div>
+          <input type="text" id="login-username" class="input-field" placeholder="Username" required>
+          <input type="password" id="login-password" class="input-field" placeholder="Password" required>
+          <button type="submit" class="primary-btn">Sign In</button>
         </form>
-        
-        <!-- Move New User and Create Account Link Above -->
-        <p class='signup-text' style="text-align: center;">New User? <a href="#" id='toSignup' class='signup-link'>Create an account</a></p>
-        
+
+        <p class='signup-text' style="text-align: center; margin-top: 10px;">
+          New User? <a href="#" id="toSignup" class="signup-link">Create an account</a>
+        </p>
+
         <div class='social-login'>
-          <p style="text-align: center;">Sign in with</p> <!-- Center-align the "Sign in with" text -->
+          <p style="text-align: center;">Sign in with</p>
           <div class='social-icons' style='display: flex; justify-content: center; gap: 20px;'>
             <img src='images/apple-icon.png' class='social-icon same-size' alt='Apple Login' style='width: 35px; height: 35px;' onclick="socialLogin('Apple')">
             <img src='images/google-icon.png' class='social-icon same-size' alt='Google Login' style='width: 35px; height: 35px;' onclick="socialLogin('Google')">
@@ -88,26 +90,77 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  content.addEventListener("submit", (event) => {
+  // Handle Sign Up & Login
+  content.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formId = event.target.id;
+
     if (formId === "signup-form") {
       console.log("Sign up form submitted!");
-      alert("Account created! Redirecting to login...");
-      setTimeout(() => {
-        termsModal.style.display = "flex";
-        blurBackground.style.display = "block";
-      }, 1000);
+      const fullName = document.getElementById("full-name").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:5050/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, fullName, password }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          alert("Account created! Redirecting to login...");
+          navigate("login");
+        } else {
+          alert(`Signup failed: ${data.error}`);
+        }
+      } catch (error) {
+        console.error("Signup Error:", error);
+        alert("Something went wrong. Check console logs.");
+      }
     } else if (formId === "login-form") {
       console.log("Login form submitted!");
-      alert("Logged in successfully!");
-      window.location.href = "home.html";
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+
+      try {
+        const response = await fetch("http://localhost:5050/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          localStorage.setItem("token", data.token);
+          alert("Logged in successfully!");
+          window.location.href = "home.html"; // Redirect after login
+        } else {
+          alert(`Login failed: ${data.error}`);
+        }
+      } catch (error) {
+        console.error("Login Error:", error);
+        alert("Something went wrong. Check console logs.");
+      }
     }
   });
 
   content.addEventListener("click", (event) => {
     if (event.target.id === "toSignup") {
       navigate("signup");
+    } else if (event.target.id === "toLogin") {
+      navigate("login");
     }
   });
 
@@ -116,33 +169,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "home.html";
   };
 });
-document.getElementById('trash-btn').addEventListener('click', function () {
-  // Select all checked favorite items
-  const selectedItems = document.querySelectorAll('.select-favorite:checked');
-  selectedItems.forEach(item => {
-    item.closest('.favorite-item').remove(); 
-  });
-});
-let index = 0;
-const timeline = document.querySelector(".timeline-content");
-const totalItems = document.querySelectorAll(".timeline-box").length;
-
-// Moves the timeline manually
-function moveTimeline(direction) {
-  index += direction;
-  if (index < 0) index = totalItems - 1;
-  if (index >= totalItems) index = 0;
-  timeline.style.transition = "transform 0.8s ease-in-out";
-  timeline.style.transform = `translateX(${-index * 160}px)`;
-}
-
-// Stops animation when hovered
-timeline.addEventListener("mouseenter", () => {
-  timeline.style.animationPlayState = "paused";
-});
-
-// Resumes animation when mouse leaves
-timeline.addEventListener("mouseleave", () => {
-  timeline.style.animationPlayState = "running";
-});
-
