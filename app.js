@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   app.style.display = "none";
 
+  // ✅ Show Terms & Conditions Modal Before Signup
   if (!localStorage.getItem("termsAccepted")) {
     console.log("Terms not accepted, showing modal.");
     termsModal.style.display = "flex";
@@ -21,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (acceptTermsBtn) {
     acceptTermsBtn.addEventListener("click", function () {
-      console.log("Terms accepted, storing in localStorage.");
+      console.log("✅ Terms accepted, storing in localStorage.");
       localStorage.setItem("termsAccepted", "true");
       termsModal.style.display = "none";
       blurBackground.style.display = "none";
-      navigate("login");
+      showAppContent(); // ✅ Show Signup Page
     });
   }
 
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigate(page) {
     console.log(`Navigating to ${page}...`);
     const logoHTML = `<img src="images/sips-logo.png" alt="App Logo" style="display: block; margin: 0 auto; max-width: 150px; width: 100%; height: auto; margin-bottom: 20px;">`;
+
     if (page === "signup") {
       content.innerHTML = `
         ${logoHTML}
@@ -52,15 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class='signup-text' style="text-align: center; margin-top: 10px;">
           Already have an account? <a href="#" id="toLogin" class="signup-link">Sign in</a>
         </p>
-
-        <div class='social-login'>
-          <p style="text-align: center;">Sign in with</p>
-          <div class='social-icons' style='display: flex; justify-content: center; gap: 20px;'>
-            <img src='images/apple-icon.png' class='social-icon same-size' alt='Apple Login' style='width: 35px; height: 35px;' onclick="socialLogin('Apple')">
-            <img src='images/google-icon.png' class='social-icon same-size' alt='Google Login' style='width: 35px; height: 35px;' onclick="socialLogin('Google')">
-            <img src='images/facebook-icon.png' class='social-icon same-size' alt='Facebook Login' style='width: 35px; height: 35px;' onclick="socialLogin('Facebook')">
-          </div>
-        </div>
       `;
       bottomNav.style.display = "none";
     } else if (page === "login") {
@@ -76,21 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <p class='signup-text' style="text-align: center; margin-top: 10px;">
           New User? <a href="#" id="toSignup" class="signup-link">Create an account</a>
         </p>
-
-        <div class='social-login'>
-          <p style="text-align: center;">Sign in with</p>
-          <div class='social-icons' style='display: flex; justify-content: center; gap: 20px;'>
-            <img src='images/apple-icon.png' class='social-icon same-size' alt='Apple Login' style='width: 35px; height: 35px;' onclick="socialLogin('Apple')">
-            <img src='images/google-icon.png' class='social-icon same-size' alt='Google Login' style='width: 35px; height: 35px;' onclick="socialLogin('Google')">
-            <img src='images/facebook-icon.png' class='social-icon same-size' alt='Facebook Login' style='width: 35px; height: 35px;' onclick="socialLogin('Facebook')">
-          </div>
-        </div>
       `;
       bottomNav.style.display = "none";
     }
   }
 
-  // Handle Sign Up & Login
+  // ✅ Handle Sign Up & Login
   content.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formId = event.target.id;
