@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   app.style.display = "none";
 
-  // ✅ Show Terms & Conditions Modal Before Signup
+  //  Show Terms & Conditions Modal Before Signup
   if (!localStorage.getItem("termsAccepted")) {
     console.log("Terms not accepted, showing modal.");
     termsModal.style.display = "flex";
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (acceptTermsBtn) {
     acceptTermsBtn.addEventListener("click", function () {
-      console.log("✅ Terms accepted, storing in localStorage.");
+      console.log(" Terms accepted, storing in localStorage.");
       localStorage.setItem("termsAccepted", "true");
       termsModal.style.display = "none";
       blurBackground.style.display = "none";
-      showAppContent(); // ✅ Show Signup Page
+      showAppContent(); //  Show Signup Page
     });
   }
 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ✅ Handle Sign Up & Login
+  //  Handle Sign Up & Login
   content.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formId = event.target.id;
