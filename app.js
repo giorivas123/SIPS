@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       try {
-        const response = await fetch("http://localhost:5050/register", {
+        const response = await fetch("https://sips-rh1i.onrender.com/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById("login-password").value;
 
       try {
-        const response = await fetch("http://localhost:5050/login", {
+        const response = await fetch("https://sips-rh1i.onrender.com/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
